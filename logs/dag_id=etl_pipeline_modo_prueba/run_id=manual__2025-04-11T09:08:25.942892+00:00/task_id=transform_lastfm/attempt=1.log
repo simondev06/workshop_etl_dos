@@ -1,0 +1,31 @@
+[2025-04-11T09:14:34.373+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.transform_lastfm manual__2025-04-11T09:08:25.942892+00:00 [queued]>
+[2025-04-11T09:14:34.382+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.transform_lastfm manual__2025-04-11T09:08:25.942892+00:00 [queued]>
+[2025-04-11T09:14:34.382+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-11T09:14:34.419+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): transform_lastfm> on 2025-04-11 09:08:25.942892+00:00
+[2025-04-11T09:14:34.425+0000] {standard_task_runner.py:60} INFO - Started process 158 to run task
+[2025-04-11T09:14:34.428+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_pipeline_modo_prueba', 'transform_lastfm', 'manual__2025-04-11T09:08:25.942892+00:00', '--job-id', '504', '--raw', '--subdir', 'DAGS_FOLDER/etl_workflow.py', '--cfg-path', '/tmp/tmpajzxxqf9']
+[2025-04-11T09:14:34.430+0000] {standard_task_runner.py:88} INFO - Job 504: Subtask transform_lastfm
+[2025-04-11T09:14:34.504+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_pipeline_modo_prueba.transform_lastfm manual__2025-04-11T09:08:25.942892+00:00 [running]> on host 0c9614b992bf
+[2025-04-11T09:14:34.709+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simon' AIRFLOW_CTX_DAG_ID='etl_pipeline_modo_prueba' AIRFLOW_CTX_TASK_ID='transform_lastfm' AIRFLOW_CTX_EXECUTION_DATE='2025-04-11T09:08:25.942892+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-11T09:08:25.942892+00:00'
+[2025-04-11T09:14:34.711+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-11T09:14:34.712+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/scripts/transform_lastfm.py']
+[2025-04-11T09:14:34.724+0000] {subprocess.py:86} INFO - Output:
+[2025-04-11T09:14:35.198+0000] {subprocess.py:93} INFO - ✅ Last.fm transformado guardado en /opt/***/data/processed/lastfm_transformed.parquet
+[2025-04-11T09:14:35.199+0000] {subprocess.py:93} INFO -                 artist  ...                                               tags
+[2025-04-11T09:14:35.199+0000] {subprocess.py:93} INFO - 0    The Neighbourhood  ...      indie, indie rock, indie pop, rock, seen live
+[2025-04-11T09:14:35.199+0000] {subprocess.py:93} INFO - 1           The Smiths  ...       indie, 80s, post-punk, new wave, alternative
+[2025-04-11T09:14:35.199+0000] {subprocess.py:93} INFO - 2             Kodaline  ...   indie rock, irish, alternative, indie, seen live
+[2025-04-11T09:14:35.199+0000] {subprocess.py:93} INFO - 3               Future  ...               Hip-Hop, rap, trap, hip hop, atlanta
+[2025-04-11T09:14:35.199+0000] {subprocess.py:93} INFO - 4    Bruce Springsteen  ...   rock, classic rock, singer-songwriter, 80s, folk
+[2025-04-11T09:14:35.199+0000] {subprocess.py:93} INFO - ..                 ...  ...                                                ...
+[2025-04-11T09:14:35.200+0000] {subprocess.py:93} INFO - 784     Plain White Ts  ...                      indie rock, emo, amazing, pwt
+[2025-04-11T09:14:35.200+0000] {subprocess.py:93} INFO - 785    Kacey Musgraves  ...  country, female vocalists, singer-songwriter, ...
+[2025-04-11T09:14:35.200+0000] {subprocess.py:93} INFO - 786               Akon  ...                    Hip-Hop, rnb, rap, hip hop, pop
+[2025-04-11T09:14:35.200+0000] {subprocess.py:93} INFO - 787   Ricky Montgomery  ...       indie, seen live, indie pop, pop, indie rock
+[2025-04-11T09:14:35.200+0000] {subprocess.py:93} INFO - 788          Aerosmith  ...            rock, classic rock, hard rock, 80s, 70s
+[2025-04-11T09:14:35.200+0000] {subprocess.py:93} INFO - 
+[2025-04-11T09:14:35.200+0000] {subprocess.py:93} INFO - [789 rows x 5 columns]
+[2025-04-11T09:14:35.289+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-04-11T09:14:35.339+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_pipeline_modo_prueba, task_id=transform_lastfm, execution_date=20250411T090825, start_date=20250411T091434, end_date=20250411T091435
+[2025-04-11T09:14:35.402+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-11T09:14:35.427+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

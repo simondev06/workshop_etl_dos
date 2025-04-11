@@ -1,0 +1,31 @@
+[2025-04-09T21:37:08.826+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.merge_datasets manual__2025-04-09T21:23:26.008365+00:00 [queued]>
+[2025-04-09T21:37:08.837+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.merge_datasets manual__2025-04-09T21:23:26.008365+00:00 [queued]>
+[2025-04-09T21:37:08.837+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-09T21:37:08.989+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): merge_datasets> on 2025-04-09 21:23:26.008365+00:00
+[2025-04-09T21:37:08.995+0000] {standard_task_runner.py:60} INFO - Started process 230 to run task
+[2025-04-09T21:37:08.998+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_pipeline_modo_prueba', 'merge_datasets', 'manual__2025-04-09T21:23:26.008365+00:00', '--job-id', '205', '--raw', '--subdir', 'DAGS_FOLDER/etl_workflow.py', '--cfg-path', '/tmp/tmpymw0femv']
+[2025-04-09T21:37:09.000+0000] {standard_task_runner.py:88} INFO - Job 205: Subtask merge_datasets
+[2025-04-09T21:37:09.098+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_pipeline_modo_prueba.merge_datasets manual__2025-04-09T21:23:26.008365+00:00 [running]> on host 705bf0793dae
+[2025-04-09T21:37:09.262+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simon' AIRFLOW_CTX_DAG_ID='etl_pipeline_modo_prueba' AIRFLOW_CTX_TASK_ID='merge_datasets' AIRFLOW_CTX_EXECUTION_DATE='2025-04-09T21:23:26.008365+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-09T21:23:26.008365+00:00'
+[2025-04-09T21:37:09.263+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-09T21:37:09.264+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/scripts/merge_datasets.py']
+[2025-04-09T21:37:09.277+0000] {subprocess.py:86} INFO - Output:
+[2025-04-09T21:37:09.860+0000] {subprocess.py:93} INFO - ✅ Merge final guardado en /opt/***/data/processed/final_merged.parquet
+[2025-04-09T21:37:09.861+0000] {subprocess.py:93} INFO -                     artist_normalized artist  ...  playcount  tags
+[2025-04-09T21:37:09.861+0000] {subprocess.py:93} INFO - 0            ['24kgoldn' 'iann dior']    NaN  ...        NaN   NaN
+[2025-04-09T21:37:09.862+0000] {subprocess.py:93} INFO - 1                  ['2pac' 'outlawz']    NaN  ...        NaN   NaN
+[2025-04-09T21:37:09.862+0000] {subprocess.py:93} INFO - 2                    ['3 doors down']    NaN  ...        NaN   NaN
+[2025-04-09T21:37:09.862+0000] {subprocess.py:93} INFO - 3             ['5 seconds of summer']    NaN  ...        NaN   NaN
+[2025-04-09T21:37:09.863+0000] {subprocess.py:93} INFO - 4                         ['50 cent']    NaN  ...        NaN   NaN
+[2025-04-09T21:37:09.863+0000] {subprocess.py:93} INFO - ..                                ...    ...  ...        ...   ...
+[2025-04-09T21:37:09.864+0000] {subprocess.py:93} INFO - 428                    ['zach bryan']    NaN  ...        NaN   NaN
+[2025-04-09T21:37:09.864+0000] {subprocess.py:93} INFO - 429           ['zayn' 'taylor swift']    NaN  ...        NaN   NaN
+[2025-04-09T21:37:09.864+0000] {subprocess.py:93} INFO - 430    ['zedd' 'maren morris' 'grey']    NaN  ...        NaN   NaN
+[2025-04-09T21:37:09.864+0000] {subprocess.py:93} INFO - 431  ['zion  lennox' 'maria becerra']    NaN  ...        NaN   NaN
+[2025-04-09T21:37:09.865+0000] {subprocess.py:93} INFO - 432                  ['zion  lennox']    NaN  ...        NaN   NaN
+[2025-04-09T21:37:09.865+0000] {subprocess.py:93} INFO - 
+[2025-04-09T21:37:09.865+0000] {subprocess.py:93} INFO - [433 rows x 15 columns]
+[2025-04-09T21:37:09.955+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-04-09T21:37:10.016+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_pipeline_modo_prueba, task_id=merge_datasets, execution_date=20250409T212326, start_date=20250409T213708, end_date=20250409T213710
+[2025-04-09T21:37:10.103+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-09T21:37:10.133+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,17 @@
+[2025-04-09T21:22:48.370+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.extract_grammy manual__2025-04-09T21:12:03.829920+00:00 [queued]>
+[2025-04-09T21:22:48.384+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.extract_grammy manual__2025-04-09T21:12:03.829920+00:00 [queued]>
+[2025-04-09T21:22:48.385+0000] {taskinstance.py:2170} INFO - Starting attempt 3 of 4
+[2025-04-09T21:22:48.440+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): extract_grammy> on 2025-04-09 21:12:03.829920+00:00
+[2025-04-09T21:22:48.447+0000] {standard_task_runner.py:60} INFO - Started process 145 to run task
+[2025-04-09T21:22:48.450+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_pipeline_modo_prueba', 'extract_grammy', 'manual__2025-04-09T21:12:03.829920+00:00', '--job-id', '183', '--raw', '--subdir', 'DAGS_FOLDER/etl_workflow.py', '--cfg-path', '/tmp/tmpgj7jutvd']
+[2025-04-09T21:22:48.452+0000] {standard_task_runner.py:88} INFO - Job 183: Subtask extract_grammy
+[2025-04-09T21:22:48.571+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_pipeline_modo_prueba.extract_grammy manual__2025-04-09T21:12:03.829920+00:00 [running]> on host 8bba8f321599
+[2025-04-09T21:22:48.812+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simon' AIRFLOW_CTX_DAG_ID='etl_pipeline_modo_prueba' AIRFLOW_CTX_TASK_ID='extract_grammy' AIRFLOW_CTX_EXECUTION_DATE='2025-04-09T21:12:03.829920+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-09T21:12:03.829920+00:00'
+[2025-04-09T21:22:48.813+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-09T21:22:48.815+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/scripts/extract_grammy.py']
+[2025-04-09T21:22:48.830+0000] {subprocess.py:86} INFO - Output:
+[2025-04-09T21:22:49.566+0000] {subprocess.py:93} INFO - ✅ Grammy guardado en /opt/***/data/processed/grammy.parquet
+[2025-04-09T21:22:49.679+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-04-09T21:22:49.744+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_pipeline_modo_prueba, task_id=extract_grammy, execution_date=20250409T211203, start_date=20250409T212248, end_date=20250409T212249
+[2025-04-09T21:22:49.834+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-09T21:22:49.873+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

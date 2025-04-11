@@ -1,0 +1,46 @@
+[2025-04-11T07:33:17.711+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.merge_datasets manual__2025-04-11T07:26:59.510100+00:00 [queued]>
+[2025-04-11T07:33:17.722+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.merge_datasets manual__2025-04-11T07:26:59.510100+00:00 [queued]>
+[2025-04-11T07:33:17.723+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-11T07:33:17.766+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): merge_datasets> on 2025-04-11 07:26:59.510100+00:00
+[2025-04-11T07:33:17.772+0000] {standard_task_runner.py:60} INFO - Started process 180 to run task
+[2025-04-11T07:33:17.774+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_pipeline_modo_prueba', 'merge_datasets', 'manual__2025-04-11T07:26:59.510100+00:00', '--job-id', '449', '--raw', '--subdir', 'DAGS_FOLDER/etl_workflow.py', '--cfg-path', '/tmp/tmpvoninvay']
+[2025-04-11T07:33:17.775+0000] {standard_task_runner.py:88} INFO - Job 449: Subtask merge_datasets
+[2025-04-11T07:33:17.852+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_pipeline_modo_prueba.merge_datasets manual__2025-04-11T07:26:59.510100+00:00 [running]> on host 6ff47a0a879a
+[2025-04-11T07:33:18.102+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simon' AIRFLOW_CTX_DAG_ID='etl_pipeline_modo_prueba' AIRFLOW_CTX_TASK_ID='merge_datasets' AIRFLOW_CTX_EXECUTION_DATE='2025-04-11T07:26:59.510100+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-11T07:26:59.510100+00:00'
+[2025-04-11T07:33:18.104+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-11T07:33:18.105+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/scripts/merge_datasets.py']
+[2025-04-11T07:33:18.118+0000] {subprocess.py:86} INFO - Output:
+[2025-04-11T07:33:19.398+0000] {subprocess.py:93} INFO - 📥 Cargando datasets...
+[2025-04-11T07:33:19.399+0000] {subprocess.py:93} INFO - ✅ Carga completada.
+[2025-04-11T07:33:19.399+0000] {subprocess.py:93} INFO - 📊 Agrupando Spotify...
+[2025-04-11T07:33:19.399+0000] {subprocess.py:93} INFO - 🏆 Agrupando Grammy...
+[2025-04-11T07:33:19.399+0000] {subprocess.py:93} INFO - 📊 Agrupando Last.fm...
+[2025-04-11T07:33:19.399+0000] {subprocess.py:93} INFO - 🔀 Uniendo Spotify y Grammy...
+[2025-04-11T07:33:19.400+0000] {subprocess.py:93} INFO - 📈 Uniendo con Last.fm...
+[2025-04-11T07:33:19.400+0000] {subprocess.py:93} INFO - 💾 Guardando dataset final...
+[2025-04-11T07:33:19.400+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-04-11T07:33:19.400+0000] {subprocess.py:93} INFO -   File "/opt/***/scripts/merge_datasets.py", line 94, in <module>
+[2025-04-11T07:33:19.400+0000] {subprocess.py:93} INFO -     df_merged.to_parquet("/opt/***/data/output/final_dataset.parquet", index=False)
+[2025-04-11T07:33:19.400+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 2889, in to_parquet
+[2025-04-11T07:33:19.401+0000] {subprocess.py:93} INFO -     return to_parquet(
+[2025-04-11T07:33:19.401+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pandas/io/parquet.py", line 411, in to_parquet
+[2025-04-11T07:33:19.401+0000] {subprocess.py:93} INFO -     impl.write(
+[2025-04-11T07:33:19.401+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pandas/io/parquet.py", line 161, in write
+[2025-04-11T07:33:19.401+0000] {subprocess.py:93} INFO -     path_or_handle, handles, kwargs["filesystem"] = _get_path_or_handle(
+[2025-04-11T07:33:19.401+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pandas/io/parquet.py", line 110, in _get_path_or_handle
+[2025-04-11T07:33:19.402+0000] {subprocess.py:93} INFO -     handles = get_handle(
+[2025-04-11T07:33:19.402+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pandas/io/common.py", line 868, in get_handle
+[2025-04-11T07:33:19.402+0000] {subprocess.py:93} INFO -     handle = open(handle, ioargs.mode)
+[2025-04-11T07:33:19.402+0000] {subprocess.py:93} INFO - PermissionError: [Errno 13] Permission denied: '/opt/***/data/output/final_dataset.parquet'
+[2025-04-11T07:33:19.491+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-04-11T07:33:19.504+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-04-11T07:33:19.507+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_pipeline_modo_prueba, task_id=merge_datasets, execution_date=20250411T072659, start_date=20250411T073317, end_date=20250411T073319
+[2025-04-11T07:33:19.649+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 449 for task merge_datasets (Bash command failed. The command returned a non-zero exit code 1.; 180)
+[2025-04-11T07:33:19.671+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-11T07:33:19.698+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

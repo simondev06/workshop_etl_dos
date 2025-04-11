@@ -1,0 +1,17 @@
+[2025-04-09T06:58:39.779+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.transform_grammy manual__2025-04-09T06:58:30.412872+00:00 [queued]>
+[2025-04-09T06:58:39.794+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.transform_grammy manual__2025-04-09T06:58:30.412872+00:00 [queued]>
+[2025-04-09T06:58:39.795+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-09T06:58:39.875+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): transform_grammy> on 2025-04-09 06:58:30.412872+00:00
+[2025-04-09T06:58:39.883+0000] {standard_task_runner.py:60} INFO - Started process 200 to run task
+[2025-04-09T06:58:39.888+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_pipeline_modo_prueba', 'transform_grammy', 'manual__2025-04-09T06:58:30.412872+00:00', '--job-id', '69', '--raw', '--subdir', 'DAGS_FOLDER/etl_workflow.py', '--cfg-path', '/tmp/tmpyb8g0tdn']
+[2025-04-09T06:58:39.891+0000] {standard_task_runner.py:88} INFO - Job 69: Subtask transform_grammy
+[2025-04-09T06:58:40.008+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_pipeline_modo_prueba.transform_grammy manual__2025-04-09T06:58:30.412872+00:00 [running]> on host fc23817944d5
+[2025-04-09T06:58:40.157+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simon' AIRFLOW_CTX_DAG_ID='etl_pipeline_modo_prueba' AIRFLOW_CTX_TASK_ID='transform_grammy' AIRFLOW_CTX_EXECUTION_DATE='2025-04-09T06:58:30.412872+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-09T06:58:30.412872+00:00'
+[2025-04-09T06:58:40.159+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-09T06:58:40.160+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/scripts/transform_grammy.py']
+[2025-04-09T06:58:40.177+0000] {subprocess.py:86} INFO - Output:
+[2025-04-09T06:58:40.891+0000] {subprocess.py:93} INFO - ❌ Error al transformar Grammy: [Errno 2] No such file or directory: '../data/processed/grammy.parquet'
+[2025-04-09T06:58:41.075+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-04-09T06:58:41.149+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_pipeline_modo_prueba, task_id=transform_grammy, execution_date=20250409T065830, start_date=20250409T065839, end_date=20250409T065841
+[2025-04-09T06:58:41.225+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-09T06:58:41.268+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

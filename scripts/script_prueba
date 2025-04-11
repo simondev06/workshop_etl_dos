@@ -1,0 +1,19 @@
+import pandas as pd
+
+# Leer archivos transformados
+spotify = pd.read_parquet("../data/processed/spotify_transformed_sample.parquet")
+lastfm = pd.read_parquet("../data/processed/lastfm_transformed_sample.parquet")
+
+# Sacar listas únicas
+a_spotify = set(spotify["artist_normalized"])
+a_lastfm = set(lastfm["artist_normalized"])
+
+# Comparar
+faltantes_en_lastfm = a_spotify - a_lastfm
+faltantes_en_spotify = a_lastfm - a_spotify
+comunes = a_spotify & a_lastfm
+
+print("✅ Coincidencias en artist_normalized:", comunes)
+print("\n❌ Artistas en Spotify pero NO en Last.fm:", faltantes_en_lastfm)
+print("\n❌ Artistas en Last.fm pero NO en Spotify:", faltantes_en_spotify)
+

@@ -1,0 +1,31 @@
+[2025-04-11T07:33:14.816+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.transform_lastfm manual__2025-04-11T07:26:59.510100+00:00 [queued]>
+[2025-04-11T07:33:14.830+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.transform_lastfm manual__2025-04-11T07:26:59.510100+00:00 [queued]>
+[2025-04-11T07:33:14.831+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-11T07:33:14.874+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): transform_lastfm> on 2025-04-11 07:26:59.510100+00:00
+[2025-04-11T07:33:14.880+0000] {standard_task_runner.py:60} INFO - Started process 157 to run task
+[2025-04-11T07:33:14.883+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_pipeline_modo_prueba', 'transform_lastfm', 'manual__2025-04-11T07:26:59.510100+00:00', '--job-id', '448', '--raw', '--subdir', 'DAGS_FOLDER/etl_workflow.py', '--cfg-path', '/tmp/tmpsie58m22']
+[2025-04-11T07:33:14.884+0000] {standard_task_runner.py:88} INFO - Job 448: Subtask transform_lastfm
+[2025-04-11T07:33:14.972+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_pipeline_modo_prueba.transform_lastfm manual__2025-04-11T07:26:59.510100+00:00 [running]> on host 6ff47a0a879a
+[2025-04-11T07:33:15.230+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simon' AIRFLOW_CTX_DAG_ID='etl_pipeline_modo_prueba' AIRFLOW_CTX_TASK_ID='transform_lastfm' AIRFLOW_CTX_EXECUTION_DATE='2025-04-11T07:26:59.510100+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-11T07:26:59.510100+00:00'
+[2025-04-11T07:33:15.231+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-11T07:33:15.232+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/scripts/transform_lastfm.py']
+[2025-04-11T07:33:15.245+0000] {subprocess.py:86} INFO - Output:
+[2025-04-11T07:33:15.875+0000] {subprocess.py:93} INFO - ✅ Last.fm transformado guardado en /opt/***/data/processed/lastfm_transformed.parquet
+[2025-04-11T07:33:15.875+0000] {subprocess.py:93} INFO -                                             artist  ...                                               tags
+[2025-04-11T07:33:15.875+0000] {subprocess.py:93} INFO - 0    Donald Lawrence presents The Tri City Singers  ...
+[2025-04-11T07:33:15.876+0000] {subprocess.py:93} INFO - 1                                       Gene Moore  ...         Soundtrack, orchestral, film, organ, score
+[2025-04-11T07:33:15.876+0000] {subprocess.py:93} INFO - 2                                   Andrea Bocelli  ...  Classical, opera, italian, andrea bocelli, mal...
+[2025-04-11T07:33:15.876+0000] {subprocess.py:93} INFO - 3                                   Jennifer Gasoi  ...
+[2025-04-11T07:33:15.876+0000] {subprocess.py:93} INFO - 4              Ben Harper with Charlie Musselwhite  ...  blues, blues rock, bluesrock, country blues, h...
+[2025-04-11T07:33:15.876+0000] {subprocess.py:93} INFO - ..                                             ...  ...                                                ...
+[2025-04-11T07:33:15.876+0000] {subprocess.py:93} INFO - 784                            TOMORROW X TOGETHER  ...                      k-pop, Kpop, pop, Korean, txt
+[2025-04-11T07:33:15.877+0000] {subprocess.py:93} INFO - 785                                        ENHYPEN  ...                k-pop, Kpop, pop, Korean, boy group
+[2025-04-11T07:33:15.877+0000] {subprocess.py:93} INFO - 786                                      Burna Boy  ...        rap, Hip-Hop, nigeria, afrobeats, seen live
+[2025-04-11T07:33:15.877+0000] {subprocess.py:93} INFO - 787                             Rodrigo y Gabriela  ...    acoustic, instrumental, guitar, Flamenco, latin
+[2025-04-11T07:33:15.877+0000] {subprocess.py:93} INFO - 788                                       Calle 13  ...    Reggaeton, latin, hip hop, puerto rico, spanish
+[2025-04-11T07:33:15.877+0000] {subprocess.py:93} INFO - 
+[2025-04-11T07:33:15.878+0000] {subprocess.py:93} INFO - [789 rows x 5 columns]
+[2025-04-11T07:33:15.979+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-04-11T07:33:16.044+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_pipeline_modo_prueba, task_id=transform_lastfm, execution_date=20250411T072659, start_date=20250411T073314, end_date=20250411T073316
+[2025-04-11T07:33:16.139+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-11T07:33:16.171+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

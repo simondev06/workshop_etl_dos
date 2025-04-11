@@ -1,0 +1,119 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13
+    restart: always
+    environment:
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=airflow
+      - POSTGRES_DB=airflow
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airflow"]
+      interval: 5s
+      retries: 5
+
+  redis:
+    image: redis:latest
+    restart: always
+
+  airflow-init:
+    image: apache/airflow:2.7.3
+    restart: on-failure
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=CeleryExecutor
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__CELERY__RESULT_BACKEND=db+postgresql://airflow:airflow@postgres/airflow
+      - AIRFLOW__CELERY__BROKER_URL=redis://redis:6379/0
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./plugins:/opt/airflow/plugins
+      - ./data:/opt/airflow/data
+      - ./scripts:/opt/airflow/scripts
+    entrypoint: bash -c
+    command: >
+      "airflow db reset --yes &&
+       airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com"
+
+  airflow-webserver:
+    image: apache/airflow:2.7.3
+    restart: always
+    depends_on:
+      - airflow-scheduler
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=CeleryExecutor
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__CELERY__RESULT_BACKEND=db+postgresql://airflow:airflow@postgres/airflow
+      - AIRFLOW__CELERY__BROKER_URL=redis://redis:6379/0
+      - AIRFLOW__WEBSERVER__SECRET_KEY=e4dc5efb5f43a67a3ef6bd96a0bb8f8f8eebcd8e34bcf4e1c93ac1ef0b26a192
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./plugins:/opt/airflow/plugins
+      - ./data:/opt/airflow/data
+      - ./scripts:/opt/airflow/scripts
+    ports:
+      - "8080:8080"
+    command: webserver
+
+  airflow-scheduler:
+    image: apache/airflow:2.7.3
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=CeleryExecutor
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__CELERY__RESULT_BACKEND=db+postgresql://airflow:airflow@postgres/airflow
+      - AIRFLOW__CELERY__BROKER_URL=redis://redis:6379/0
+      - AIRFLOW__WEBSERVER__SECRET_KEY=e4dc5efb5f43a67a3ef6bd96a0bb8f8f8eebcd8e34bcf4e1c93ac1ef0b26a192
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./plugins:/opt/airflow/plugins
+      - ./data:/opt/airflow/data
+      - ./scripts:/opt/airflow/scripts
+    command: scheduler
+
+  airflow-worker:
+    image: apache/airflow:2.7.3
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=CeleryExecutor
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__CELERY__RESULT_BACKEND=db+postgresql://airflow:airflow@postgres/airflow
+      - AIRFLOW__CELERY__BROKER_URL=redis://redis:6379/0
+      - AIRFLOW__WEBSERVER__SECRET_KEY=e4dc5efb5f43a67a3ef6bd96a0bb8f8f8eebcd8e34bcf4e1c93ac1ef0b26a192
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./plugins:/opt/airflow/plugins
+      - ./data:/opt/airflow/data
+      - ./scripts:/opt/airflow/scripts
+    command: celery worker
+
+  airflow-triggerer:
+    image: apache/airflow:2.7.3
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=CeleryExecutor
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__CELERY__RESULT_BACKEND=db+postgresql://airflow:airflow@postgres/airflow
+      - AIRFLOW__CELERY__BROKER_URL=redis://redis:6379/0
+      - AIRFLOW__WEBSERVER__SECRET_KEY=e4dc5efb5f43a67a3ef6bd96a0bb8f8f8eebcd8e34bcf4e1c93ac1ef0b26a192
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./plugins:/opt/airflow/plugins
+      - ./data:/opt/airflow/data
+      - ./scripts:/opt/airflow/scripts
+    command: triggerer
+
+volumes:
+  postgres-db-volume:
+

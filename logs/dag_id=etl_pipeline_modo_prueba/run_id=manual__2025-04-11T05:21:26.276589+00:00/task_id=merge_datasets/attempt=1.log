@@ -1,0 +1,28 @@
+[2025-04-11T05:27:31.720+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.merge_datasets manual__2025-04-11T05:21:26.276589+00:00 [queued]>
+[2025-04-11T05:27:31.730+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.merge_datasets manual__2025-04-11T05:21:26.276589+00:00 [queued]>
+[2025-04-11T05:27:31.730+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-11T05:27:31.771+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): merge_datasets> on 2025-04-11 05:21:26.276589+00:00
+[2025-04-11T05:27:31.777+0000] {standard_task_runner.py:60} INFO - Started process 177 to run task
+[2025-04-11T05:27:31.780+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_pipeline_modo_prueba', 'merge_datasets', 'manual__2025-04-11T05:21:26.276589+00:00', '--job-id', '417', '--raw', '--subdir', 'DAGS_FOLDER/etl_workflow.py', '--cfg-path', '/tmp/tmp6zdst8pe']
+[2025-04-11T05:27:31.782+0000] {standard_task_runner.py:88} INFO - Job 417: Subtask merge_datasets
+[2025-04-11T05:27:31.857+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_pipeline_modo_prueba.merge_datasets manual__2025-04-11T05:21:26.276589+00:00 [running]> on host d3762c126d49
+[2025-04-11T05:27:32.023+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simon' AIRFLOW_CTX_DAG_ID='etl_pipeline_modo_prueba' AIRFLOW_CTX_TASK_ID='merge_datasets' AIRFLOW_CTX_EXECUTION_DATE='2025-04-11T05:21:26.276589+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-11T05:21:26.276589+00:00'
+[2025-04-11T05:27:32.024+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-11T05:27:32.025+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/scripts/merge_datasets.py']
+[2025-04-11T05:27:32.038+0000] {subprocess.py:86} INFO - Output:
+[2025-04-11T05:27:32.068+0000] {subprocess.py:93} INFO -   File "/opt/***/scripts/merge_datasets.py", line 10
+[2025-04-11T05:27:32.068+0000] {subprocess.py:93} INFO -     if 'artists' in spotify_df.columns:
+[2025-04-11T05:27:32.068+0000] {subprocess.py:93} INFO -     ^
+[2025-04-11T05:27:32.069+0000] {subprocess.py:93} INFO - SyntaxError: invalid syntax
+[2025-04-11T05:27:32.072+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-04-11T05:27:32.084+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-04-11T05:27:32.087+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_pipeline_modo_prueba, task_id=merge_datasets, execution_date=20250411T052126, start_date=20250411T052731, end_date=20250411T052732
+[2025-04-11T05:27:32.239+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 417 for task merge_datasets (Bash command failed. The command returned a non-zero exit code 1.; 177)
+[2025-04-11T05:27:32.273+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-11T05:27:32.297+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

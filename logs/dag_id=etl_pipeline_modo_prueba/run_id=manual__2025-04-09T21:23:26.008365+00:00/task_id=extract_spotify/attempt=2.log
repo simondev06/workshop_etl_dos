@@ -1,0 +1,31 @@
+[2025-04-09T21:24:11.771+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.extract_spotify manual__2025-04-09T21:23:26.008365+00:00 [queued]>
+[2025-04-09T21:24:11.781+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.extract_spotify manual__2025-04-09T21:23:26.008365+00:00 [queued]>
+[2025-04-09T21:24:11.781+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 3
+[2025-04-09T21:24:11.829+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): extract_spotify> on 2025-04-09 21:23:26.008365+00:00
+[2025-04-09T21:24:11.836+0000] {standard_task_runner.py:60} INFO - Started process 326 to run task
+[2025-04-09T21:24:11.840+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_pipeline_modo_prueba', 'extract_spotify', 'manual__2025-04-09T21:23:26.008365+00:00', '--job-id', '192', '--raw', '--subdir', 'DAGS_FOLDER/etl_workflow.py', '--cfg-path', '/tmp/tmpqmpf7dta']
+[2025-04-09T21:24:11.841+0000] {standard_task_runner.py:88} INFO - Job 192: Subtask extract_spotify
+[2025-04-09T21:24:11.943+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_pipeline_modo_prueba.extract_spotify manual__2025-04-09T21:23:26.008365+00:00 [running]> on host 8bba8f321599
+[2025-04-09T21:24:12.124+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simon' AIRFLOW_CTX_DAG_ID='etl_pipeline_modo_prueba' AIRFLOW_CTX_TASK_ID='extract_spotify' AIRFLOW_CTX_EXECUTION_DATE='2025-04-09T21:23:26.008365+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-09T21:23:26.008365+00:00'
+[2025-04-09T21:24:12.125+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-09T21:24:12.127+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/scripts/extract_spotify.py']
+[2025-04-09T21:24:12.141+0000] {subprocess.py:86} INFO - Output:
+[2025-04-09T21:24:13.388+0000] {subprocess.py:93} INFO - ✅ Spotify guardado en /opt/***/data/processed/spotify.parquet
+[2025-04-09T21:24:13.389+0000] {subprocess.py:93} INFO -        Unnamed: 0  ...             artist_normalized
+[2025-04-09T21:24:13.389+0000] {subprocess.py:93} INFO - 20001       20001  ...       [sam smith, kim petras]
+[2025-04-09T21:24:13.389+0000] {subprocess.py:93} INFO - 81051       81051  ...       [sam smith, kim petras]
+[2025-04-09T21:24:13.389+0000] {subprocess.py:93} INFO - 51664       51664  ...           [bizarrap, quevedo]
+[2025-04-09T21:24:13.389+0000] {subprocess.py:93} INFO - 81210       81210  ...    [david guetta, bebe rexha]
+[2025-04-09T21:24:13.390+0000] {subprocess.py:93} INFO - 89411       89411  ...               [manuel turizo]
+[2025-04-09T21:24:13.390+0000] {subprocess.py:93} INFO - ...           ...  ...                           ...
+[2025-04-09T21:24:13.390+0000] {subprocess.py:93} INFO - 91766       91766  ...                [guns n roses]
+[2025-04-09T21:24:13.390+0000] {subprocess.py:93} INFO - 8001         8001  ...           [cage the elephant]
+[2025-04-09T21:24:13.390+0000] {subprocess.py:93} INFO - 91765       91765  ...                [guns n roses]
+[2025-04-09T21:24:13.390+0000] {subprocess.py:93} INFO - 2259         2259  ...                     [nirvana]
+[2025-04-09T21:24:13.390+0000] {subprocess.py:93} INFO - 3001         3001  ...  [amaarae, kali uchis, moliy]
+[2025-04-09T21:24:13.391+0000] {subprocess.py:93} INFO - 
+[2025-04-09T21:24:13.391+0000] {subprocess.py:93} INFO - [1210 rows x 23 columns]
+[2025-04-09T21:24:13.488+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-04-09T21:24:13.546+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_pipeline_modo_prueba, task_id=extract_spotify, execution_date=20250409T212326, start_date=20250409T212411, end_date=20250409T212413
+[2025-04-09T21:24:13.633+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-09T21:24:13.667+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,31 @@
+[2025-04-10T17:45:05.474+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.merge_datasets manual__2025-04-10T17:38:05.729930+00:00 [queued]>
+[2025-04-10T17:45:05.483+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.merge_datasets manual__2025-04-10T17:38:05.729930+00:00 [queued]>
+[2025-04-10T17:45:05.483+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-10T17:45:05.520+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): merge_datasets> on 2025-04-10 17:38:05.729930+00:00
+[2025-04-10T17:45:05.525+0000] {standard_task_runner.py:60} INFO - Started process 181 to run task
+[2025-04-10T17:45:05.528+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_pipeline_modo_prueba', 'merge_datasets', 'manual__2025-04-10T17:38:05.729930+00:00', '--job-id', '294', '--raw', '--subdir', 'DAGS_FOLDER/etl_workflow.py', '--cfg-path', '/tmp/tmpzx0iee43']
+[2025-04-10T17:45:05.529+0000] {standard_task_runner.py:88} INFO - Job 294: Subtask merge_datasets
+[2025-04-10T17:45:05.606+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_pipeline_modo_prueba.merge_datasets manual__2025-04-10T17:38:05.729930+00:00 [running]> on host e8d53dd1124d
+[2025-04-10T17:45:05.822+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simon' AIRFLOW_CTX_DAG_ID='etl_pipeline_modo_prueba' AIRFLOW_CTX_TASK_ID='merge_datasets' AIRFLOW_CTX_EXECUTION_DATE='2025-04-10T17:38:05.729930+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-10T17:38:05.729930+00:00'
+[2025-04-10T17:45:05.823+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-10T17:45:05.824+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/scripts/merge_datasets.py']
+[2025-04-10T17:45:05.837+0000] {subprocess.py:86} INFO - Output:
+[2025-04-10T17:45:06.357+0000] {subprocess.py:93} INFO - ✅ Merge final guardado en /opt/***/data/processed/final_merged.parquet
+[2025-04-10T17:45:06.358+0000] {subprocess.py:93} INFO -        artist_normalized  ...                                               tags
+[2025-04-10T17:45:06.358+0000] {subprocess.py:93} INFO - 0                         ...                                                NaN
+[2025-04-10T17:45:06.358+0000] {subprocess.py:93} INFO - 1                   2pac  ...                                                NaN
+[2025-04-10T17:45:06.358+0000] {subprocess.py:93} INFO - 2           3 doors down  ...  rock, alternative rock, alternative, hard rock...
+[2025-04-10T17:45:06.358+0000] {subprocess.py:93} INFO - 3    5 seconds of summer  ...          pop rock, pop punk, rock, pop, australian
+[2025-04-10T17:45:06.359+0000] {subprocess.py:93} INFO - 4                50 cent  ...        rap, Hip-Hop, Gangsta Rap, hip hop, 50 Cent
+[2025-04-10T17:45:06.359+0000] {subprocess.py:93} INFO - ..                   ...  ...                                                ...
+[2025-04-10T17:45:06.359+0000] {subprocess.py:93} INFO - 415   yusuf  cat stevens  ...                                                NaN
+[2025-04-10T17:45:06.359+0000] {subprocess.py:93} INFO - 416           zach bryan  ...  country, singer-songwriter, americana, Alt-cou...
+[2025-04-10T17:45:06.360+0000] {subprocess.py:93} INFO - 417         zara larsson  ...                                                NaN
+[2025-04-10T17:45:06.360+0000] {subprocess.py:93} INFO - 418                 zayn  ...                                                NaN
+[2025-04-10T17:45:06.360+0000] {subprocess.py:93} INFO - 419         zion  lennox  ...
+[2025-04-10T17:45:06.360+0000] {subprocess.py:93} INFO - 
+[2025-04-10T17:45:06.360+0000] {subprocess.py:93} INFO - [420 rows x 15 columns]
+[2025-04-10T17:45:06.439+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-04-10T17:45:06.510+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_pipeline_modo_prueba, task_id=merge_datasets, execution_date=20250410T173805, start_date=20250410T174505, end_date=20250410T174506
+[2025-04-10T17:45:06.582+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-10T17:45:06.609+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

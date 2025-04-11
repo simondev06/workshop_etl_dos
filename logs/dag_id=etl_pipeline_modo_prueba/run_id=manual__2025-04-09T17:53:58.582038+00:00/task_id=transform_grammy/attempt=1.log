@@ -1,0 +1,31 @@
+[2025-04-09T17:54:05.297+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.transform_grammy manual__2025-04-09T17:53:58.582038+00:00 [queued]>
+[2025-04-09T17:54:05.308+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.transform_grammy manual__2025-04-09T17:53:58.582038+00:00 [queued]>
+[2025-04-09T17:54:05.308+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-09T17:54:05.356+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): transform_grammy> on 2025-04-09 17:53:58.582038+00:00
+[2025-04-09T17:54:05.364+0000] {standard_task_runner.py:60} INFO - Started process 108 to run task
+[2025-04-09T17:54:05.368+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_pipeline_modo_prueba', 'transform_grammy', 'manual__2025-04-09T17:53:58.582038+00:00', '--job-id', '136', '--raw', '--subdir', 'DAGS_FOLDER/etl_workflow.py', '--cfg-path', '/tmp/tmpqrjlj1w6']
+[2025-04-09T17:54:05.369+0000] {standard_task_runner.py:88} INFO - Job 136: Subtask transform_grammy
+[2025-04-09T17:54:05.455+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_pipeline_modo_prueba.transform_grammy manual__2025-04-09T17:53:58.582038+00:00 [running]> on host 6493c8ab4351
+[2025-04-09T17:54:05.638+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simon' AIRFLOW_CTX_DAG_ID='etl_pipeline_modo_prueba' AIRFLOW_CTX_TASK_ID='transform_grammy' AIRFLOW_CTX_EXECUTION_DATE='2025-04-09T17:53:58.582038+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-09T17:53:58.582038+00:00'
+[2025-04-09T17:54:05.640+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-09T17:54:05.641+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/scripts/transform_grammy.py']
+[2025-04-09T17:54:05.655+0000] {subprocess.py:86} INFO - Output:
+[2025-04-09T17:54:06.326+0000] {subprocess.py:93} INFO - ✅ Grammy transformado guardado en /opt/***/data/processed/grammy_transformed.parquet
+[2025-04-09T17:54:06.327+0000] {subprocess.py:93} INFO -                                                  artist  ...                                  artist_normalized
+[2025-04-09T17:54:06.327+0000] {subprocess.py:93} INFO - 0                                         Billie Eilish  ...                                      billie eilish
+[2025-04-09T17:54:06.327+0000] {subprocess.py:93} INFO - 1                                              Bon Iver  ...                                           bon iver
+[2025-04-09T17:54:06.327+0000] {subprocess.py:93} INFO - 2                                         Ariana Grande  ...                                      ariana grande
+[2025-04-09T17:54:06.327+0000] {subprocess.py:93} INFO - 3                                                H.E.R.  ...                                                her
+[2025-04-09T17:54:06.327+0000] {subprocess.py:93} INFO - 4                                                Khalid  ...                                             khalid
+[2025-04-09T17:54:06.328+0000] {subprocess.py:93} INFO - ...                                                 ...  ...                                                ...
+[2025-04-09T17:54:06.328+0000] {subprocess.py:93} INFO - 1180                                  (Various Artists)  ...                                    various artists
+[2025-04-09T17:54:06.328+0000] {subprocess.py:93} INFO - 1182  Ryan Bingham & T Bone Burnett, songwriters (Ry...  ...  ryan bingham  t bone burnett songwriters ryan ...
+[2025-04-09T17:54:06.328+0000] {subprocess.py:93} INFO - 1207  Lucas Richman, Various Artists & The Royal Phi...  ...  lucas richman various artists  the royal philh...
+[2025-04-09T17:54:06.328+0000] {subprocess.py:93} INFO - 1208                                          Lady Gaga  ...                                          lady gaga
+[2025-04-09T17:54:06.328+0000] {subprocess.py:93} INFO - 1209                                        (The Doors)  ...                                          the doors
+[2025-04-09T17:54:06.328+0000] {subprocess.py:93} INFO - 
+[2025-04-09T17:54:06.329+0000] {subprocess.py:93} INFO - [735 rows x 5 columns]
+[2025-04-09T17:54:06.445+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-04-09T17:54:06.517+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_pipeline_modo_prueba, task_id=transform_grammy, execution_date=20250409T175358, start_date=20250409T175405, end_date=20250409T175406
+[2025-04-09T17:54:06.626+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-09T17:54:06.657+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,18 @@
+[2025-04-11T03:26:11.221+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.export_to_csv manual__2025-04-11T03:19:52.328275+00:00 [queued]>
+[2025-04-11T03:26:11.232+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.export_to_csv manual__2025-04-11T03:19:52.328275+00:00 [queued]>
+[2025-04-11T03:26:11.233+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-11T03:26:11.275+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): export_to_csv> on 2025-04-11 03:19:52.328275+00:00
+[2025-04-11T03:26:11.281+0000] {standard_task_runner.py:60} INFO - Started process 226 to run task
+[2025-04-11T03:26:11.284+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_pipeline_modo_prueba', 'export_to_csv', 'manual__2025-04-11T03:19:52.328275+00:00', '--job-id', '364', '--raw', '--subdir', 'DAGS_FOLDER/etl_workflow.py', '--cfg-path', '/tmp/tmpedu93uh_']
+[2025-04-11T03:26:11.285+0000] {standard_task_runner.py:88} INFO - Job 364: Subtask export_to_csv
+[2025-04-11T03:26:11.354+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_pipeline_modo_prueba.export_to_csv manual__2025-04-11T03:19:52.328275+00:00 [running]> on host a42c4eec2493
+[2025-04-11T03:26:11.515+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simon' AIRFLOW_CTX_DAG_ID='etl_pipeline_modo_prueba' AIRFLOW_CTX_TASK_ID='export_to_csv' AIRFLOW_CTX_EXECUTION_DATE='2025-04-11T03:19:52.328275+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-11T03:19:52.328275+00:00'
+[2025-04-11T03:26:11.516+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-11T03:26:11.517+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/scripts/export_to_csv.py']
+[2025-04-11T03:26:11.529+0000] {subprocess.py:86} INFO - Output:
+[2025-04-11T03:26:11.988+0000] {subprocess.py:93} INFO - ✅ Leído: /opt/***/data/processed/final_merged.parquet
+[2025-04-11T03:26:11.988+0000] {subprocess.py:93} INFO - 📤 Exportado como CSV en: /opt/***/data/output/final_merged.csv
+[2025-04-11T03:26:12.073+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-04-11T03:26:12.136+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_pipeline_modo_prueba, task_id=export_to_csv, execution_date=20250411T031952, start_date=20250411T032611, end_date=20250411T032612
+[2025-04-11T03:26:12.220+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-11T03:26:12.238+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

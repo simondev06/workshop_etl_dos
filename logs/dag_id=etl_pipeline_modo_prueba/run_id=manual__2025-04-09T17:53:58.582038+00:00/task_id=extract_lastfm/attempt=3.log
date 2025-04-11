@@ -1,0 +1,442 @@
+[2025-04-09T18:13:59.275+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.extract_lastfm manual__2025-04-09T17:53:58.582038+00:00 [queued]>
+[2025-04-09T18:13:59.285+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.extract_lastfm manual__2025-04-09T17:53:58.582038+00:00 [queued]>
+[2025-04-09T18:13:59.285+0000] {taskinstance.py:2170} INFO - Starting attempt 3 of 3
+[2025-04-09T18:13:59.321+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): extract_lastfm> on 2025-04-09 17:53:58.582038+00:00
+[2025-04-09T18:13:59.327+0000] {standard_task_runner.py:60} INFO - Started process 261 to run task
+[2025-04-09T18:13:59.331+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_pipeline_modo_prueba', 'extract_lastfm', 'manual__2025-04-09T17:53:58.582038+00:00', '--job-id', '143', '--raw', '--subdir', 'DAGS_FOLDER/etl_workflow.py', '--cfg-path', '/tmp/tmpq9238fq8']
+[2025-04-09T18:13:59.332+0000] {standard_task_runner.py:88} INFO - Job 143: Subtask extract_lastfm
+[2025-04-09T18:13:59.415+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_pipeline_modo_prueba.extract_lastfm manual__2025-04-09T17:53:58.582038+00:00 [running]> on host 6493c8ab4351
+[2025-04-09T18:13:59.588+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simon' AIRFLOW_CTX_DAG_ID='etl_pipeline_modo_prueba' AIRFLOW_CTX_TASK_ID='extract_lastfm' AIRFLOW_CTX_EXECUTION_DATE='2025-04-09T17:53:58.582038+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-09T17:53:58.582038+00:00'
+[2025-04-09T18:13:59.589+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-09T18:13:59.590+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/scripts/extract_lastfm.py']
+[2025-04-09T18:13:59.602+0000] {subprocess.py:86} INFO - Output:
+[2025-04-09T18:15:22.129+0000] {subprocess.py:93} INFO - 🔍 Consultando: dave chappelle
+[2025-04-09T18:15:22.130+0000] {subprocess.py:93} INFO - 🔍 Consultando: j balvin  bad bunny
+[2025-04-09T18:15:22.131+0000] {subprocess.py:93} INFO - 🔍 Consultando: cat power
+[2025-04-09T18:15:22.131+0000] {subprocess.py:93} INFO - 🔍 Consultando: megan davies
+[2025-04-09T18:15:22.132+0000] {subprocess.py:93} INFO - 🔍 Consultando: anna nalick
+[2025-04-09T18:15:22.132+0000] {subprocess.py:93} INFO - 🔍 Consultando: miho hazama
+[2025-04-09T18:15:22.132+0000] {subprocess.py:93} INFO - 🔍 Consultando: liniker
+[2025-04-09T18:15:22.133+0000] {subprocess.py:93} INFO - 🔍 Consultando: sam smith
+[2025-04-09T18:15:22.133+0000] {subprocess.py:93} INFO - 🔍 Consultando: steve lacy
+[2025-04-09T18:15:22.133+0000] {subprocess.py:93} INFO - 🔍 Consultando: marty stuart
+[2025-04-09T18:15:22.133+0000] {subprocess.py:93} INFO - 🔍 Consultando: pitbull
+[2025-04-09T18:15:22.134+0000] {subprocess.py:93} INFO - 🔍 Consultando: terraza big band
+[2025-04-09T18:15:22.134+0000] {subprocess.py:93} INFO - 🔍 Consultando: steven curtis chapman
+[2025-04-09T18:15:22.134+0000] {subprocess.py:93} INFO - 🔍 Consultando: tove lo
+[2025-04-09T18:15:22.134+0000] {subprocess.py:93} INFO - 🔍 Consultando: harley poe
+[2025-04-09T18:15:22.134+0000] {subprocess.py:93} INFO - 🔍 Consultando: sebastian yatra
+[2025-04-09T18:15:22.135+0000] {subprocess.py:93} INFO - 🔍 Consultando: carolina chocolate drops
+[2025-04-09T18:15:22.135+0000] {subprocess.py:93} INFO - 🔍 Consultando: ruben blades con roberto delgado  orquesta
+[2025-04-09T18:15:22.135+0000] {subprocess.py:93} INFO - ❌ No se encontró info para ruben blades con roberto delgado  orquesta
+[2025-04-09T18:15:22.135+0000] {subprocess.py:93} INFO - 🔍 Consultando: jane ira bloom
+[2025-04-09T18:15:22.135+0000] {subprocess.py:93} INFO - 🔍 Consultando: mumford  sons edward sharpe  the magnetic zeros  old crow medicine show
+[2025-04-09T18:15:22.136+0000] {subprocess.py:93} INFO - ❌ No se encontró info para mumford  sons edward sharpe  the magnetic zeros  old crow medicine show
+[2025-04-09T18:15:22.136+0000] {subprocess.py:93} INFO - 🔍 Consultando: mana
+[2025-04-09T18:15:22.136+0000] {subprocess.py:93} INFO - 🔍 Consultando: tim vantol
+[2025-04-09T18:15:22.136+0000] {subprocess.py:93} INFO - 🔍 Consultando: tori kelly
+[2025-04-09T18:15:22.136+0000] {subprocess.py:93} INFO - 🔍 Consultando: ile
+[2025-04-09T18:15:22.137+0000] {subprocess.py:93} INFO - 🔍 Consultando: meiko
+[2025-04-09T18:15:22.137+0000] {subprocess.py:93} INFO - 🔍 Consultando: hannah trigwell
+[2025-04-09T18:15:22.137+0000] {subprocess.py:93} INFO - 🔍 Consultando: shawn mendes  camila cabello
+[2025-04-09T18:15:22.137+0000] {subprocess.py:93} INFO - 🔍 Consultando: caleb santos
+[2025-04-09T18:15:22.137+0000] {subprocess.py:93} INFO - 🔍 Consultando: luis enrique  c4 trio
+[2025-04-09T18:15:22.137+0000] {subprocess.py:93} INFO - ❌ No se encontró info para luis enrique  c4 trio
+[2025-04-09T18:15:22.137+0000] {subprocess.py:93} INFO - 🔍 Consultando: sekou andrews  the string theory
+[2025-04-09T18:15:22.137+0000] {subprocess.py:93} INFO - ❌ No se encontró info para sekou andrews  the string theory
+[2025-04-09T18:15:22.137+0000] {subprocess.py:93} INFO - 🔍 Consultando: the national
+[2025-04-09T18:15:22.138+0000] {subprocess.py:93} INFO - 🔍 Consultando: tyler childers
+[2025-04-09T18:15:22.138+0000] {subprocess.py:93} INFO - 🔍 Consultando: usher
+[2025-04-09T18:15:22.138+0000] {subprocess.py:93} INFO - 🔍 Consultando: adele adkins  paul epworth songwriters adele
+[2025-04-09T18:15:22.138+0000] {subprocess.py:93} INFO - ❌ No se encontró info para adele adkins  paul epworth songwriters adele
+[2025-04-09T18:15:22.138+0000] {subprocess.py:93} INFO - 🔍 Consultando: matthew perryman jones
+[2025-04-09T18:15:22.138+0000] {subprocess.py:93} INFO - 🔍 Consultando: aron wright
+[2025-04-09T18:15:22.138+0000] {subprocess.py:93} INFO - 🔍 Consultando: jj heller
+[2025-04-09T18:15:22.139+0000] {subprocess.py:93} INFO - 🔍 Consultando: anat cohen tentet
+[2025-04-09T18:15:22.139+0000] {subprocess.py:93} INFO - 🔍 Consultando: ricky martin
+[2025-04-09T18:15:22.139+0000] {subprocess.py:93} INFO - 🔍 Consultando: snarky puppy
+[2025-04-09T18:15:22.139+0000] {subprocess.py:93} INFO - 🔍 Consultando: julian marley
+[2025-04-09T18:15:22.139+0000] {subprocess.py:93} INFO - 🔍 Consultando: limoblaze
+[2025-04-09T18:15:22.139+0000] {subprocess.py:93} INFO - 🔍 Consultando: jayz  kanye west featuring frank ocean  thedream
+[2025-04-09T18:15:22.139+0000] {subprocess.py:93} INFO - ❌ No se encontró info para jayz  kanye west featuring frank ocean  thedream
+[2025-04-09T18:15:22.139+0000] {subprocess.py:93} INFO - 🔍 Consultando: lil nas x  billy ray cyrus
+[2025-04-09T18:15:22.140+0000] {subprocess.py:93} INFO - 🔍 Consultando: macklemore  ryan lewis featuring wanz
+[2025-04-09T18:15:22.140+0000] {subprocess.py:93} INFO - ❌ No se encontró info para macklemore  ryan lewis featuring wanz
+[2025-04-09T18:15:22.140+0000] {subprocess.py:93} INFO - 🔍 Consultando: jennifer gasoi
+[2025-04-09T18:15:22.140+0000] {subprocess.py:93} INFO - 🔍 Consultando: lindsey stirling
+[2025-04-09T18:15:22.140+0000] {subprocess.py:93} INFO - 🔍 Consultando: her featuring bryson tiller
+[2025-04-09T18:15:22.140+0000] {subprocess.py:93} INFO - ❌ No se encontró info para her featuring bryson tiller
+[2025-04-09T18:15:22.140+0000] {subprocess.py:93} INFO - 🔍 Consultando: chrissy dave
+[2025-04-09T18:15:22.140+0000] {subprocess.py:93} INFO - ❌ No se encontró info para chrissy dave
+[2025-04-09T18:15:22.141+0000] {subprocess.py:93} INFO - 🔍 Consultando: portugal the man
+[2025-04-09T18:15:22.141+0000] {subprocess.py:93} INFO - 🔍 Consultando: celine
+[2025-04-09T18:15:22.141+0000] {subprocess.py:93} INFO - 🔍 Consultando: jazzmeia horn
+[2025-04-09T18:15:22.141+0000] {subprocess.py:93} INFO - 🔍 Consultando: sara phillips
+[2025-04-09T18:15:22.141+0000] {subprocess.py:93} INFO - 🔍 Consultando: taylor swift
+[2025-04-09T18:15:22.141+0000] {subprocess.py:93} INFO - 🔍 Consultando: demian rodriguez
+[2025-04-09T18:15:22.141+0000] {subprocess.py:93} INFO - 🔍 Consultando: chance the rapper
+[2025-04-09T18:15:22.141+0000] {subprocess.py:93} INFO - 🔍 Consultando: yu takahashi
+[2025-04-09T18:15:22.142+0000] {subprocess.py:93} INFO - 🔍 Consultando: morgan heritage
+[2025-04-09T18:15:22.142+0000] {subprocess.py:93} INFO - 🔍 Consultando: ivan  alyosha
+[2025-04-09T18:15:22.142+0000] {subprocess.py:93} INFO - 🔍 Consultando: dangelo and the vanguard
+[2025-04-09T18:15:22.142+0000] {subprocess.py:93} INFO - 🔍 Consultando: dan berk
+[2025-04-09T18:15:22.142+0000] {subprocess.py:93} INFO - 🔍 Consultando: takehara pistol
+[2025-04-09T18:15:22.142+0000] {subprocess.py:93} INFO - 🔍 Consultando: andrew ripp
+[2025-04-09T18:15:22.142+0000] {subprocess.py:93} INFO - 🔍 Consultando: spellbinder
+[2025-04-09T18:15:22.142+0000] {subprocess.py:93} INFO - 🔍 Consultando: mark guiliana
+[2025-04-09T18:15:22.142+0000] {subprocess.py:93} INFO - 🔍 Consultando: flor de toloache
+[2025-04-09T18:15:22.143+0000] {subprocess.py:93} INFO - 🔍 Consultando: edy hafler
+[2025-04-09T18:15:22.143+0000] {subprocess.py:93} INFO - 🔍 Consultando: sara farell
+[2025-04-09T18:15:22.143+0000] {subprocess.py:93} INFO - 🔍 Consultando: killswitch engage
+[2025-04-09T18:15:22.143+0000] {subprocess.py:93} INFO - 🔍 Consultando: todd carey
+[2025-04-09T18:15:22.143+0000] {subprocess.py:93} INFO - 🔍 Consultando: jonas brothers
+[2025-04-09T18:15:22.143+0000] {subprocess.py:93} INFO - 🔍 Consultando: sakura fujiwara
+[2025-04-09T18:15:22.144+0000] {subprocess.py:93} INFO - 🔍 Consultando: chris cornell
+[2025-04-09T18:15:22.144+0000] {subprocess.py:93} INFO - 🔍 Consultando: naotaro moriyama
+[2025-04-09T18:15:22.144+0000] {subprocess.py:93} INFO - 🔍 Consultando: trevor noah
+[2025-04-09T18:15:22.144+0000] {subprocess.py:93} INFO - 🔍 Consultando: brett dennen
+[2025-04-09T18:15:22.144+0000] {subprocess.py:93} INFO - 🔍 Consultando: pinetop perkins  willie big eyes smith
+[2025-04-09T18:15:22.144+0000] {subprocess.py:93} INFO - ❌ No se encontró info para pinetop perkins  willie big eyes smith
+[2025-04-09T18:15:22.144+0000] {subprocess.py:93} INFO - 🔍 Consultando: beyond the guitar
+[2025-04-09T18:15:22.144+0000] {subprocess.py:93} INFO - 🔍 Consultando: rodrigo y gabriela
+[2025-04-09T18:15:22.145+0000] {subprocess.py:93} INFO - 🔍 Consultando: grace george
+[2025-04-09T18:15:22.145+0000] {subprocess.py:93} INFO - 🔍 Consultando: joshua redman quartet
+[2025-04-09T18:15:22.145+0000] {subprocess.py:93} INFO - 🔍 Consultando: jessie reyez
+[2025-04-09T18:15:22.145+0000] {subprocess.py:93} INFO - 🔍 Consultando: milton nascimento
+[2025-04-09T18:15:22.145+0000] {subprocess.py:93} INFO - 🔍 Consultando: salty snacks
+[2025-04-09T18:15:22.145+0000] {subprocess.py:93} INFO - 🔍 Consultando: brad mehldau
+[2025-04-09T18:15:22.145+0000] {subprocess.py:93} INFO - 🔍 Consultando: the cameron collective
+[2025-04-09T18:15:22.146+0000] {subprocess.py:93} INFO - 🔍 Consultando: t bone burnett taylor swift john paul white  joy williams songwriters taylor swift featuring the civil wars
+[2025-04-09T18:15:22.146+0000] {subprocess.py:93} INFO - ❌ No se encontró info para t bone burnett taylor swift john paul white  joy williams songwriters taylor swift featuring the civil wars
+[2025-04-09T18:15:22.146+0000] {subprocess.py:93} INFO - 🔍 Consultando: taylor manns
+[2025-04-09T18:15:22.146+0000] {subprocess.py:93} INFO - 🔍 Consultando: brian lynch big band
+[2025-04-09T18:15:22.146+0000] {subprocess.py:93} INFO - 🔍 Consultando: luther allison
+[2025-04-09T18:15:22.147+0000] {subprocess.py:93} INFO - 🔍 Consultando: sebastian prada
+[2025-04-09T18:15:22.147+0000] {subprocess.py:93} INFO - ❌ No se encontró info para sebastian prada
+[2025-04-09T18:15:22.147+0000] {subprocess.py:93} INFO - 🔍 Consultando: the mayries
+[2025-04-09T18:15:22.147+0000] {subprocess.py:93} INFO - 🔍 Consultando: switchfoot
+[2025-04-09T18:15:22.148+0000] {subprocess.py:93} INFO - 🔍 Consultando: david bowie
+[2025-04-09T18:15:22.148+0000] {subprocess.py:93} INFO - 🔍 Consultando: altin gun
+[2025-04-09T18:15:22.148+0000] {subprocess.py:93} INFO - 🔍 Consultando: tasha cobbs
+[2025-04-09T18:15:22.148+0000] {subprocess.py:93} INFO - 🔍 Consultando: jack white
+[2025-04-09T18:15:22.148+0000] {subprocess.py:93} INFO - 🔍 Consultando: lady gaga
+[2025-04-09T18:15:22.148+0000] {subprocess.py:93} INFO - 🔍 Consultando: tim kubart
+[2025-04-09T18:15:22.150+0000] {subprocess.py:93} INFO - 🔍 Consultando: sad boy
+[2025-04-09T18:15:22.150+0000] {subprocess.py:93} INFO - 🔍 Consultando: michael buble
+[2025-04-09T18:15:22.151+0000] {subprocess.py:93} INFO - 🔍 Consultando: mariachi los camperos
+[2025-04-09T18:15:22.151+0000] {subprocess.py:93} INFO - 🔍 Consultando: koffee
+[2025-04-09T18:15:22.151+0000] {subprocess.py:93} INFO - 🔍 Consultando: ichiko aoba
+[2025-04-09T18:15:22.151+0000] {subprocess.py:93} INFO - 🔍 Consultando: larry carlton  tak matsumoto
+[2025-04-09T18:15:22.152+0000] {subprocess.py:93} INFO - ❌ No se encontró info para larry carlton  tak matsumoto
+[2025-04-09T18:15:22.152+0000] {subprocess.py:93} INFO - 🔍 Consultando: ruben blades
+[2025-04-09T18:15:22.152+0000] {subprocess.py:93} INFO - 🔍 Consultando: eastmountainsouth
+[2025-04-09T18:15:22.152+0000] {subprocess.py:93} INFO - 🔍 Consultando: brendan james
+[2025-04-09T18:15:22.152+0000] {subprocess.py:93} INFO - 🔍 Consultando: bule bule
+[2025-04-09T18:15:22.152+0000] {subprocess.py:93} INFO - 🔍 Consultando: aaron espe
+[2025-04-09T18:15:22.153+0000] {subprocess.py:93} INFO - 🔍 Consultando: lady gaga  bradley cooper
+[2025-04-09T18:15:22.153+0000] {subprocess.py:93} INFO - 🔍 Consultando: the clare fischer latin jazz big band
+[2025-04-09T18:15:22.153+0000] {subprocess.py:93} INFO - 🔍 Consultando: gene moore
+[2025-04-09T18:15:22.153+0000] {subprocess.py:93} INFO - 🔍 Consultando: amos lee
+[2025-04-09T18:15:22.153+0000] {subprocess.py:93} INFO - 🔍 Consultando: christian scott atunde adjuah
+[2025-04-09T18:15:22.154+0000] {subprocess.py:93} INFO - 🔍 Consultando: john frusciante
+[2025-04-09T18:15:22.154+0000] {subprocess.py:93} INFO - 🔍 Consultando: lecrae
+[2025-04-09T18:15:22.154+0000] {subprocess.py:93} INFO - 🔍 Consultando: carlos vives
+[2025-04-09T18:15:22.154+0000] {subprocess.py:93} INFO - 🔍 Consultando: josh ottum
+[2025-04-09T18:15:22.154+0000] {subprocess.py:93} INFO - 🔍 Consultando: ray lorraine
+[2025-04-09T18:15:22.154+0000] {subprocess.py:93} INFO - 🔍 Consultando: chris botti
+[2025-04-09T18:15:22.154+0000] {subprocess.py:93} INFO - 🔍 Consultando: lil nas x
+[2025-04-09T18:15:22.155+0000] {subprocess.py:93} INFO - 🔍 Consultando: ross copperman
+[2025-04-09T18:15:22.155+0000] {subprocess.py:93} INFO - 🔍 Consultando: ziggy marley
+[2025-04-09T18:15:22.155+0000] {subprocess.py:93} INFO - 🔍 Consultando: rory block
+[2025-04-09T18:15:22.155+0000] {subprocess.py:93} INFO - 🔍 Consultando: emma heesters
+[2025-04-09T18:15:22.156+0000] {subprocess.py:93} INFO - 🔍 Consultando: the rescues
+[2025-04-09T18:15:22.156+0000] {subprocess.py:93} INFO - 🔍 Consultando: del mccoury band
+[2025-04-09T18:15:22.156+0000] {subprocess.py:93} INFO - 🔍 Consultando: j cole
+[2025-04-09T18:15:22.156+0000] {subprocess.py:93} INFO - 🔍 Consultando: jaques morelenbaum
+[2025-04-09T18:15:22.156+0000] {subprocess.py:93} INFO - 🔍 Consultando: the stanley clarke band
+[2025-04-09T18:15:22.156+0000] {subprocess.py:93} INFO - 🔍 Consultando: rent strike
+[2025-04-09T18:15:22.156+0000] {subprocess.py:93} INFO - 🔍 Consultando: larkin poe
+[2025-04-09T18:15:22.157+0000] {subprocess.py:93} INFO - 🔍 Consultando: emicida
+[2025-04-09T18:15:22.157+0000] {subprocess.py:93} INFO - 🔍 Consultando: the band perry
+[2025-04-09T18:15:22.157+0000] {subprocess.py:93} INFO - 🔍 Consultando: violent femmes
+[2025-04-09T18:15:22.157+0000] {subprocess.py:93} INFO - 🔍 Consultando: the black keys
+[2025-04-09T18:15:22.157+0000] {subprocess.py:93} INFO - 🔍 Consultando: mcklopedia
+[2025-04-09T18:15:22.157+0000] {subprocess.py:93} INFO - 🔍 Consultando: max martin shellback  justin timberlake songwriters justin timberlake anna kendrick gwen stefani james corden zooey deschanel walt dohrn ron funches caroline hjelt aino jawo christopher mintzplasse  kunal nayyar
+[2025-04-09T18:15:22.158+0000] {subprocess.py:93} INFO - ❌ No se encontró info para max martin shellback  justin timberlake songwriters justin timberlake anna kendrick gwen stefani james corden zooey deschanel walt dohrn ron funches caroline hjelt aino jawo christopher mintzplasse  kunal nayyar
+[2025-04-09T18:15:22.158+0000] {subprocess.py:93} INFO - 🔍 Consultando: bailey jehl
+[2025-04-09T18:15:22.158+0000] {subprocess.py:93} INFO - 🔍 Consultando: not half bad
+[2025-04-09T18:15:22.158+0000] {subprocess.py:93} INFO - 🔍 Consultando: the wayne shorter quartet
+[2025-04-09T18:15:22.158+0000] {subprocess.py:93} INFO - 🔍 Consultando: dj khaled featuring nipsey hussle  john legend
+[2025-04-09T18:15:22.158+0000] {subprocess.py:93} INFO - ❌ No se encontró info para dj khaled featuring nipsey hussle  john legend
+[2025-04-09T18:15:22.159+0000] {subprocess.py:93} INFO - 🔍 Consultando: high on fire
+[2025-04-09T18:15:22.159+0000] {subprocess.py:93} INFO - 🔍 Consultando: yoyo ma stuart duncan edgar meyer  chris thile
+[2025-04-09T18:15:22.159+0000] {subprocess.py:93} INFO - ❌ No se encontró info para yoyo ma stuart duncan edgar meyer  chris thile
+[2025-04-09T18:15:22.159+0000] {subprocess.py:93} INFO - 🔍 Consultando: priscilla ahn
+[2025-04-09T18:15:22.159+0000] {subprocess.py:93} INFO - 🔍 Consultando: lil nas x featuring billy ray cyrus
+[2025-04-09T18:15:22.159+0000] {subprocess.py:93} INFO - 🔍 Consultando: tim menzies
+[2025-04-09T18:15:22.159+0000] {subprocess.py:93} INFO - 🔍 Consultando: maria schneider orchestra
+[2025-04-09T18:15:22.160+0000] {subprocess.py:93} INFO - 🔍 Consultando: alejandro sanz
+[2025-04-09T18:15:22.160+0000] {subprocess.py:93} INFO - 🔍 Consultando: pentatonix featuring dolly parton
+[2025-04-09T18:15:22.160+0000] {subprocess.py:93} INFO - 🔍 Consultando: megan nicole
+[2025-04-09T18:15:22.160+0000] {subprocess.py:93} INFO - 🔍 Consultando: kazuyoshi saito
+[2025-04-09T18:15:22.160+0000] {subprocess.py:93} INFO - 🔍 Consultando: her featuring daniel caesar
+[2025-04-09T18:15:22.160+0000] {subprocess.py:93} INFO - ❌ No se encontró info para her featuring daniel caesar
+[2025-04-09T18:15:22.160+0000] {subprocess.py:93} INFO - 🔍 Consultando: joe brooks
+[2025-04-09T18:15:22.161+0000] {subprocess.py:93} INFO - 🔍 Consultando: arcade fire
+[2025-04-09T18:15:22.161+0000] {subprocess.py:93} INFO - 🔍 Consultando: ranky tanky
+[2025-04-09T18:15:22.161+0000] {subprocess.py:93} INFO - 🔍 Consultando: freddie king
+[2025-04-09T18:15:22.162+0000] {subprocess.py:93} INFO - 🔍 Consultando: matt redman
+[2025-04-09T18:15:22.162+0000] {subprocess.py:93} INFO - 🔍 Consultando: bring me the horizon
+[2025-04-09T18:15:22.162+0000] {subprocess.py:93} INFO - 🔍 Consultando: letta mbulu
+[2025-04-09T18:15:22.162+0000] {subprocess.py:93} INFO - 🔍 Consultando: zedd featuring foxes
+[2025-04-09T18:15:22.162+0000] {subprocess.py:93} INFO - 🔍 Consultando: ethan loukas
+[2025-04-09T18:15:22.163+0000] {subprocess.py:93} INFO - 🔍 Consultando: leon bridges
+[2025-04-09T18:15:22.163+0000] {subprocess.py:93} INFO - 🔍 Consultando: mark ronson featuring bruno mars
+[2025-04-09T18:15:22.163+0000] {subprocess.py:93} INFO - 🔍 Consultando: sade
+[2025-04-09T18:15:22.163+0000] {subprocess.py:93} INFO - 🔍 Consultando: quincy jones
+[2025-04-09T18:15:22.163+0000] {subprocess.py:93} INFO - 🔍 Consultando: mance lipscomb
+[2025-04-09T18:15:22.164+0000] {subprocess.py:93} INFO - 🔍 Consultando: christian mcbride big band
+[2025-04-09T18:15:22.164+0000] {subprocess.py:93} INFO - 🔍 Consultando: jayz  alicia keys
+[2025-04-09T18:15:22.164+0000] {subprocess.py:93} INFO - 🔍 Consultando: joeyrory
+[2025-04-09T18:15:22.164+0000] {subprocess.py:93} INFO - 🔍 Consultando: rihanna
+[2025-04-09T18:15:22.164+0000] {subprocess.py:93} INFO - 🔍 Consultando: parker jenkins
+[2025-04-09T18:15:22.164+0000] {subprocess.py:93} INFO - 🔍 Consultando: frank turner
+[2025-04-09T18:15:22.165+0000] {subprocess.py:93} INFO - 🔍 Consultando: bailey rushlow
+[2025-04-09T18:15:22.165+0000] {subprocess.py:93} INFO - 🔍 Consultando: william murphy
+[2025-04-09T18:15:22.165+0000] {subprocess.py:93} INFO - 🔍 Consultando: chubby carrier and the bayou swamp band
+[2025-04-09T18:15:22.165+0000] {subprocess.py:93} INFO - 🔍 Consultando: little joe  la familia
+[2025-04-09T18:15:22.165+0000] {subprocess.py:93} INFO - 🔍 Consultando: maluma
+[2025-04-09T18:15:22.166+0000] {subprocess.py:93} INFO - 🔍 Consultando: cae
+[2025-04-09T18:15:22.166+0000] {subprocess.py:93} INFO - 🔍 Consultando: bootstraps
+[2025-04-09T18:15:22.166+0000] {subprocess.py:93} INFO - 🔍 Consultando: the chainsmokers featuring daya
+[2025-04-09T18:15:22.166+0000] {subprocess.py:93} INFO - 🔍 Consultando: buguinha dub
+[2025-04-09T18:15:22.166+0000] {subprocess.py:93} INFO - 🔍 Consultando: apparat
+[2025-04-09T18:15:22.167+0000] {subprocess.py:93} INFO - 🔍 Consultando: david sanchez
+[2025-04-09T18:15:22.167+0000] {subprocess.py:93} INFO - 🔍 Consultando: neela vaswani
+[2025-04-09T18:15:22.167+0000] {subprocess.py:93} INFO - 🔍 Consultando: rhiannon giddens with francesco turrisi
+[2025-04-09T18:15:22.167+0000] {subprocess.py:93} INFO - 🔍 Consultando: joan rivers
+[2025-04-09T18:17:05.991+0000] {subprocess.py:93} INFO - 🔍 Consultando: unkle bob
+[2025-04-09T18:17:05.992+0000] {subprocess.py:93} INFO - 🔍 Consultando: drew holcomb
+[2025-04-09T18:17:05.992+0000] {subprocess.py:93} INFO - 🔍 Consultando: dave van ronk
+[2025-04-09T18:17:05.993+0000] {subprocess.py:93} INFO - 🔍 Consultando: subhira
+[2025-04-09T18:17:05.993+0000] {subprocess.py:93} INFO - 🔍 Consultando: ariana grande
+[2025-04-09T18:17:05.993+0000] {subprocess.py:93} INFO - 🔍 Consultando: kacey musgraves
+[2025-04-09T18:17:05.993+0000] {subprocess.py:93} INFO - 🔍 Consultando: zac brown band
+[2025-04-09T18:17:05.994+0000] {subprocess.py:93} INFO - 🔍 Consultando: kt tunstall
+[2025-04-09T18:17:05.994+0000] {subprocess.py:93} INFO - 🔍 Consultando: thomas daniel
+[2025-04-09T18:17:05.994+0000] {subprocess.py:93} INFO - 🔍 Consultando: caj morgan
+[2025-04-09T18:17:05.994+0000] {subprocess.py:93} INFO - 🔍 Consultando: meta meta
+[2025-04-09T18:17:05.994+0000] {subprocess.py:93} INFO - 🔍 Consultando: ferraz
+[2025-04-09T18:17:05.995+0000] {subprocess.py:93} INFO - 🔍 Consultando: pj morton featuring yebba
+[2025-04-09T18:17:05.995+0000] {subprocess.py:93} INFO - ❌ No se encontró info para pj morton featuring yebba
+[2025-04-09T18:17:05.996+0000] {subprocess.py:93} INFO - 🔍 Consultando: highland peak
+[2025-04-09T18:17:05.996+0000] {subprocess.py:93} INFO - 🔍 Consultando: augustana
+[2025-04-09T18:17:05.996+0000] {subprocess.py:93} INFO - 🔍 Consultando: eddie vedder
+[2025-04-09T18:17:05.996+0000] {subprocess.py:93} INFO - 🔍 Consultando: los tigres del norte
+[2025-04-09T18:17:05.997+0000] {subprocess.py:93} INFO - 🔍 Consultando: chick corea  the spanish heart band
+[2025-04-09T18:17:05.997+0000] {subprocess.py:93} INFO - ❌ No se encontró info para chick corea  the spanish heart band
+[2025-04-09T18:17:05.997+0000] {subprocess.py:93} INFO - 🔍 Consultando: mike farris
+[2025-04-09T18:17:05.997+0000] {subprocess.py:93} INFO - 🔍 Consultando: sufjan stevens
+[2025-04-09T18:17:05.997+0000] {subprocess.py:93} INFO - 🔍 Consultando: sunset  highland
+[2025-04-09T18:17:05.998+0000] {subprocess.py:93} INFO - 🔍 Consultando: william fitzsimmons
+[2025-04-09T18:17:05.998+0000] {subprocess.py:93} INFO - 🔍 Consultando: chucho valdes
+[2025-04-09T18:17:05.998+0000] {subprocess.py:93} INFO - 🔍 Consultando: jess penner
+[2025-04-09T18:17:05.998+0000] {subprocess.py:93} INFO - 🔍 Consultando: hillary scott  the scott family
+[2025-04-09T18:17:05.998+0000] {subprocess.py:93} INFO - 🔍 Consultando: silk city  dua lipa featuring diplo  mark ronson
+[2025-04-09T18:17:05.998+0000] {subprocess.py:93} INFO - ❌ No se encontró info para silk city  dua lipa featuring diplo  mark ronson
+[2025-04-09T18:17:05.999+0000] {subprocess.py:93} INFO - 🔍 Consultando: the rolling stones
+[2025-04-09T18:17:05.999+0000] {subprocess.py:93} INFO - 🔍 Consultando: carly lyman
+[2025-04-09T18:17:05.999+0000] {subprocess.py:93} INFO - 🔍 Consultando: frank ocean
+[2025-04-09T18:17:05.999+0000] {subprocess.py:93} INFO - 🔍 Consultando: angelina cruz
+[2025-04-09T18:17:05.999+0000] {subprocess.py:93} INFO - 🔍 Consultando: flume
+[2025-04-09T18:17:05.999+0000] {subprocess.py:93} INFO - 🔍 Consultando: bela fleck
+[2025-04-09T18:17:06.000+0000] {subprocess.py:93} INFO - 🔍 Consultando: dr john
+[2025-04-09T18:17:06.000+0000] {subprocess.py:93} INFO - 🔍 Consultando: trevor hall
+[2025-04-09T18:17:06.000+0000] {subprocess.py:93} INFO - 🔍 Consultando: ybn cordae
+[2025-04-09T18:17:06.000+0000] {subprocess.py:93} INFO - 🔍 Consultando: the cranberries
+[2025-04-09T18:17:06.000+0000] {subprocess.py:93} INFO - 🔍 Consultando: janis ian
+[2025-04-09T18:17:06.000+0000] {subprocess.py:93} INFO - 🔍 Consultando: fantastic negrito
+[2025-04-09T18:17:06.000+0000] {subprocess.py:93} INFO - 🔍 Consultando: correatown
+[2025-04-09T18:17:06.001+0000] {subprocess.py:93} INFO - 🔍 Consultando: leonard cohen
+[2025-04-09T18:17:06.001+0000] {subprocess.py:93} INFO - 🔍 Consultando: mat kearney
+[2025-04-09T18:17:06.001+0000] {subprocess.py:93} INFO - 🔍 Consultando: chris cresswell
+[2025-04-09T18:17:06.001+0000] {subprocess.py:93} INFO - 🔍 Consultando: jeff lorber fusion
+[2025-04-09T18:17:06.001+0000] {subprocess.py:93} INFO - 🔍 Consultando: darius rucker
+[2025-04-09T18:17:06.001+0000] {subprocess.py:93} INFO - 🔍 Consultando: halestorm
+[2025-04-09T18:17:06.002+0000] {subprocess.py:93} INFO - 🔍 Consultando: nathalie joachim with spektral quartet
+[2025-04-09T18:17:06.002+0000] {subprocess.py:93} INFO - 🔍 Consultando: jimmy fallon
+[2025-04-09T18:17:06.002+0000] {subprocess.py:93} INFO - 🔍 Consultando: michelle featherstone
+[2025-04-09T18:17:06.002+0000] {subprocess.py:93} INFO - 🔍 Consultando: khalid
+[2025-04-09T18:17:06.002+0000] {subprocess.py:93} INFO - 🔍 Consultando: marc anthony
+[2025-04-09T18:17:06.002+0000] {subprocess.py:93} INFO - 🔍 Consultando: pj morton
+[2025-04-09T18:17:06.003+0000] {subprocess.py:93} INFO - 🔍 Consultando: the shins
+[2025-04-09T18:17:06.003+0000] {subprocess.py:93} INFO - 🔍 Consultando: tenacious d
+[2025-04-09T18:17:06.003+0000] {subprocess.py:93} INFO - 🔍 Consultando: ysabelle cuevas
+[2025-04-09T18:17:06.003+0000] {subprocess.py:93} INFO - 🔍 Consultando: white sun
+[2025-04-09T18:17:06.003+0000] {subprocess.py:93} INFO - 🔍 Consultando: karen o  danger mouse
+[2025-04-09T18:17:06.004+0000] {subprocess.py:93} INFO - 🔍 Consultando: steve tannen
+[2025-04-09T18:17:06.004+0000] {subprocess.py:93} INFO - 🔍 Consultando: brooks  dunn with luke combs
+[2025-04-09T18:17:06.004+0000] {subprocess.py:93} INFO - ❌ No se encontró info para brooks  dunn with luke combs
+[2025-04-09T18:17:06.004+0000] {subprocess.py:93} INFO - 🔍 Consultando: julie andrews  emma walton hamilton
+[2025-04-09T18:17:06.004+0000] {subprocess.py:93} INFO - ❌ No se encontró info para julie andrews  emma walton hamilton
+[2025-04-09T18:17:06.004+0000] {subprocess.py:93} INFO - 🔍 Consultando: steel pulse
+[2025-04-09T18:17:06.005+0000] {subprocess.py:93} INFO - 🔍 Consultando: aymee nuviola
+[2025-04-09T18:17:06.005+0000] {subprocess.py:93} INFO - 🔍 Consultando: chuck ragan
+[2025-04-09T18:17:06.005+0000] {subprocess.py:93} INFO - 🔍 Consultando: miles davis
+[2025-04-09T18:17:06.005+0000] {subprocess.py:93} INFO - 🔍 Consultando: ben harper with charlie musselwhite
+[2025-04-09T18:17:06.005+0000] {subprocess.py:93} INFO - 🔍 Consultando: corinne bailey rae
+[2025-04-09T18:17:06.006+0000] {subprocess.py:93} INFO - 🔍 Consultando: anya marina
+[2025-04-09T18:17:06.006+0000] {subprocess.py:93} INFO - 🔍 Consultando: zoe
+[2025-04-09T18:17:06.006+0000] {subprocess.py:93} INFO - 🔍 Consultando: herb alpert
+[2025-04-09T18:17:06.006+0000] {subprocess.py:93} INFO - 🔍 Consultando: nipsey hussle featuring roddy ricch  hitboy
+[2025-04-09T18:17:06.006+0000] {subprocess.py:93} INFO - ❌ No se encontró info para nipsey hussle featuring roddy ricch  hitboy
+[2025-04-09T18:17:06.006+0000] {subprocess.py:93} INFO - 🔍 Consultando: luis fonsi
+[2025-04-09T18:17:06.007+0000] {subprocess.py:93} INFO - 🔍 Consultando: christone kingfish ingram
+[2025-04-09T18:17:06.007+0000] {subprocess.py:93} INFO - 🔍 Consultando: daniel tashian
+[2025-04-09T18:17:06.007+0000] {subprocess.py:93} INFO - 🔍 Consultando: robert glasper experiment
+[2025-04-09T18:17:06.007+0000] {subprocess.py:93} INFO - 🔍 Consultando: shannon  keast
+[2025-04-09T18:17:06.007+0000] {subprocess.py:93} INFO - 🔍 Consultando: dave grohl  various artists
+[2025-04-09T18:17:06.007+0000] {subprocess.py:93} INFO - ❌ No se encontró info para dave grohl  various artists
+[2025-04-09T18:17:06.007+0000] {subprocess.py:93} INFO - 🔍 Consultando: pacific mambo orchestra
+[2025-04-09T18:17:06.008+0000] {subprocess.py:93} INFO - 🔍 Consultando: laura jane grace
+[2025-04-09T18:17:06.008+0000] {subprocess.py:93} INFO - 🔍 Consultando: cage the elephant
+[2025-04-09T18:17:06.008+0000] {subprocess.py:93} INFO - 🔍 Consultando: nathan angelo
+[2025-04-09T18:17:06.008+0000] {subprocess.py:93} INFO - 🔍 Consultando: ravi shankar
+[2025-04-09T18:17:06.008+0000] {subprocess.py:93} INFO - 🔍 Consultando: damon albarn
+[2025-04-09T18:17:06.009+0000] {subprocess.py:93} INFO - 🔍 Consultando: vendredi
+[2025-04-09T18:17:06.009+0000] {subprocess.py:93} INFO - 🔍 Consultando: lucky peterson
+[2025-04-09T18:17:06.009+0000] {subprocess.py:93} INFO - 🔍 Consultando: liz reis
+[2025-04-09T18:17:06.009+0000] {subprocess.py:93} INFO - ❌ No se encontró info para liz reis
+[2025-04-09T18:17:06.009+0000] {subprocess.py:93} INFO - 🔍 Consultando: paul avgerinos
+[2025-04-09T18:17:06.009+0000] {subprocess.py:93} INFO - 🔍 Consultando: aqualung
+[2025-04-09T18:17:06.010+0000] {subprocess.py:93} INFO - 🔍 Consultando: beans on toast
+[2025-04-09T18:17:06.010+0000] {subprocess.py:93} INFO - 🔍 Consultando: damian jr gong marley
+[2025-04-09T18:17:06.010+0000] {subprocess.py:93} INFO - 🔍 Consultando: marlow rosado y la riquena
+[2025-04-09T18:17:06.010+0000] {subprocess.py:93} INFO - 🔍 Consultando: sierra ferrell
+[2025-04-09T18:17:06.010+0000] {subprocess.py:93} INFO - 🔍 Consultando: rhonda vincent and the rage
+[2025-04-09T18:17:06.011+0000] {subprocess.py:93} INFO - 🔍 Consultando: jayz  kanye west
+[2025-04-09T18:17:06.011+0000] {subprocess.py:93} INFO - 🔍 Consultando: vicente garcia
+[2025-04-09T18:17:06.012+0000] {subprocess.py:93} INFO - 🔍 Consultando: bailey pelkman
+[2025-04-09T18:17:06.012+0000] {subprocess.py:93} INFO - 🔍 Consultando: janine tenoso
+[2025-04-09T18:17:06.013+0000] {subprocess.py:93} INFO - 🔍 Consultando: deva premal
+[2025-04-09T18:17:06.013+0000] {subprocess.py:93} INFO - 🔍 Consultando: titus williams
+[2025-04-09T18:17:06.013+0000] {subprocess.py:93} INFO - 🔍 Consultando: joey cape
+[2025-04-09T18:17:06.013+0000] {subprocess.py:93} INFO - 🔍 Consultando: linn brikell
+[2025-04-09T18:17:06.014+0000] {subprocess.py:93} INFO - 🔍 Consultando: the new mastersounds
+[2025-04-09T18:17:06.014+0000] {subprocess.py:93} INFO - 🔍 Consultando: angelique kidjo
+[2025-04-09T18:17:06.014+0000] {subprocess.py:93} INFO - 🔍 Consultando: sara bareilles
+[2025-04-09T18:17:06.014+0000] {subprocess.py:93} INFO - 🔍 Consultando: billkin
+[2025-04-09T18:17:06.014+0000] {subprocess.py:93} INFO - 🔍 Consultando: kurt cobain
+[2025-04-09T18:17:06.014+0000] {subprocess.py:93} INFO - 🔍 Consultando: dababy
+[2025-04-09T18:17:06.015+0000] {subprocess.py:93} INFO - 🔍 Consultando: steve gadd band
+[2025-04-09T18:17:06.015+0000] {subprocess.py:93} INFO - 🔍 Consultando: muniesa
+[2025-04-09T18:17:06.015+0000] {subprocess.py:93} INFO - 🔍 Consultando: bonobo
+[2025-04-09T18:17:06.015+0000] {subprocess.py:93} INFO - 🔍 Consultando: dan andriano in the emergency room
+[2025-04-09T18:17:06.015+0000] {subprocess.py:93} INFO - 🔍 Consultando: toumani diabate
+[2025-04-09T18:17:06.015+0000] {subprocess.py:93} INFO - 🔍 Consultando: gregory alan isakov
+[2025-04-09T18:17:06.016+0000] {subprocess.py:93} INFO - 🔍 Consultando: twenty one pilots
+[2025-04-09T18:17:06.016+0000] {subprocess.py:93} INFO - 🔍 Consultando: eliane elias
+[2025-04-09T18:17:06.016+0000] {subprocess.py:93} INFO - 🔍 Consultando: safetysuit
+[2025-04-09T18:17:06.016+0000] {subprocess.py:93} INFO - 🔍 Consultando: chad hates george
+[2025-04-09T18:17:06.016+0000] {subprocess.py:93} INFO - 🔍 Consultando: the carters
+[2025-04-09T18:17:06.016+0000] {subprocess.py:93} INFO - 🔍 Consultando: erin mccarley
+[2025-04-09T18:17:06.017+0000] {subprocess.py:93} INFO - 🔍 Consultando: charlotte almgren
+[2025-04-09T18:17:06.017+0000] {subprocess.py:93} INFO - 🔍 Consultando: vampire weekend
+[2025-04-09T18:17:06.017+0000] {subprocess.py:93} INFO - 🔍 Consultando: natalia lafourcade
+[2025-04-09T18:17:06.017+0000] {subprocess.py:93} INFO - 🔍 Consultando: fifth harmony
+[2025-04-09T18:17:06.017+0000] {subprocess.py:93} INFO - 🔍 Consultando: bobby rush
+[2025-04-09T18:17:06.017+0000] {subprocess.py:93} INFO - 🔍 Consultando: skrillex featuring sirah
+[2025-04-09T18:17:06.018+0000] {subprocess.py:93} INFO - 🔍 Consultando: ariana grande  social house
+[2025-04-09T18:17:06.018+0000] {subprocess.py:93} INFO - 🔍 Consultando: hugh jackman  various artists
+[2025-04-09T18:17:06.018+0000] {subprocess.py:93} INFO - ❌ No se encontró info para hugh jackman  various artists
+[2025-04-09T18:17:06.018+0000] {subprocess.py:93} INFO - 🔍 Consultando: opium moon
+[2025-04-09T18:17:06.018+0000] {subprocess.py:93} INFO - 🔍 Consultando: jon stewart with  samantha bee wyatt cenac jason jones john oliver  sigourney weaver
+[2025-04-09T18:17:06.018+0000] {subprocess.py:93} INFO - ❌ No se encontró info para jon stewart with  samantha bee wyatt cenac jason jones john oliver  sigourney weaver
+[2025-04-09T18:17:06.019+0000] {subprocess.py:93} INFO - 🔍 Consultando: erica campbell
+[2025-04-09T18:17:06.019+0000] {subprocess.py:93} INFO - 🔍 Consultando: buju banton
+[2025-04-09T18:17:06.019+0000] {subprocess.py:93} INFO - 🔍 Consultando: matt pless
+[2025-04-09T18:17:06.019+0000] {subprocess.py:93} INFO - 🔍 Consultando: tobymac
+[2025-04-09T18:17:06.019+0000] {subprocess.py:93} INFO - 🔍 Consultando: the infamous stringdusters
+[2025-04-09T18:17:06.019+0000] {subprocess.py:93} INFO - 🔍 Consultando: as ganhadeiras de itapua
+[2025-04-09T18:17:06.020+0000] {subprocess.py:93} INFO - ❌ No se encontró info para as ganhadeiras de itapua
+[2025-04-09T18:17:06.020+0000] {subprocess.py:93} INFO - 🔍 Consultando: jon bryant
+[2025-04-09T18:17:06.020+0000] {subprocess.py:93} INFO - 🔍 Consultando: ghost
+[2025-04-09T18:17:06.020+0000] {subprocess.py:93} INFO - 🔍 Consultando: a great big world
+[2025-04-09T18:17:06.020+0000] {subprocess.py:93} INFO - 🔍 Consultando: hannahs yard
+[2025-04-09T18:17:06.020+0000] {subprocess.py:93} INFO - 🔍 Consultando: lorde
+[2025-04-09T18:17:06.021+0000] {subprocess.py:93} INFO - 🔍 Consultando: gotye
+[2025-04-09T18:17:06.021+0000] {subprocess.py:93} INFO - 🔍 Consultando: filip nordin
+[2025-04-09T18:17:06.021+0000] {subprocess.py:93} INFO - 🔍 Consultando: richard walters
+[2025-04-09T18:17:06.021+0000] {subprocess.py:93} INFO - 🔍 Consultando: david arkenstone
+[2025-04-09T18:17:06.021+0000] {subprocess.py:93} INFO - 🔍 Consultando: the civil wars
+[2025-04-09T18:17:06.021+0000] {subprocess.py:93} INFO - 🔍 Consultando: joy williams
+[2025-04-09T18:17:06.022+0000] {subprocess.py:93} INFO - 🔍 Consultando: la roux
+[2025-04-09T18:17:06.022+0000] {subprocess.py:93} INFO - 🔍 Consultando: the weeknd
+[2025-04-09T18:17:06.022+0000] {subprocess.py:93} INFO - 🔍 Consultando: ankle grease
+[2025-04-09T18:17:06.022+0000] {subprocess.py:93} INFO - 🔍 Consultando: 21 savage
+[2025-04-09T18:17:06.022+0000] {subprocess.py:93} INFO - 🔍 Consultando: ben rector
+[2025-04-09T18:17:06.022+0000] {subprocess.py:93} INFO - 🔍 Consultando: joss favela
+[2025-04-09T18:17:06.023+0000] {subprocess.py:93} INFO - 🔍 Consultando: landon pigg
+[2025-04-09T18:17:06.023+0000] {subprocess.py:93} INFO - 🔍 Consultando: terri lyne carrington
+[2025-04-09T18:17:06.023+0000] {subprocess.py:93} INFO - 🔍 Consultando: rachel grae
+[2025-04-09T18:17:06.023+0000] {subprocess.py:93} INFO - 🔍 Consultando: yuzu
+[2025-04-09T18:17:06.023+0000] {subprocess.py:93} INFO - 🔍 Consultando: beyonce featuring jay z
+[2025-04-09T18:17:06.023+0000] {subprocess.py:93} INFO - 🔍 Consultando: marc broussard
+[2025-04-09T18:17:06.024+0000] {subprocess.py:93} INFO - 🔍 Consultando: stephanie briggs
+[2025-04-09T18:17:06.024+0000] {subprocess.py:93} INFO - 🔍 Consultando: residente
+[2025-04-09T18:17:06.024+0000] {subprocess.py:93} INFO - 🔍 Consultando: pat metheny
+[2025-04-09T18:17:06.024+0000] {subprocess.py:93} INFO - 🔍 Consultando: pete seeger with the rivertown kids and friends
+[2025-04-09T18:17:06.024+0000] {subprocess.py:93} INFO - 🔍 Consultando: eminem featuring rihanna
+[2025-04-09T18:17:06.024+0000] {subprocess.py:93} INFO - 🔍 Consultando: adam christopher
+[2025-04-09T18:17:06.025+0000] {subprocess.py:93} INFO - 🔍 Consultando: mone kamishiraishi
+[2025-04-09T18:17:06.025+0000] {subprocess.py:93} INFO - 🔍 Consultando: rapadura
+[2025-04-09T18:17:06.025+0000] {subprocess.py:93} INFO - 🔍 Consultando: maren morris
+[2025-04-09T18:17:06.025+0000] {subprocess.py:93} INFO - 🔍 Consultando: oconnor band with mark oconnor
+[2025-04-09T18:17:06.025+0000] {subprocess.py:93} INFO - ❌ No se encontró info para oconnor band with mark oconnor
+[2025-04-09T18:17:06.025+0000] {subprocess.py:93} INFO - 🔍 Consultando: intocable
+[2025-04-09T18:17:06.026+0000] {subprocess.py:93} INFO - 🔍 Consultando: eminem
+[2025-04-09T18:17:06.026+0000] {subprocess.py:93} INFO - 🔍 Consultando: anna hamilton
+[2025-04-09T18:17:06.026+0000] {subprocess.py:93} INFO - 🔍 Consultando: darlene love merry clayton lisa fischer  judith hill
+[2025-04-09T18:17:06.026+0000] {subprocess.py:93} INFO - ❌ No se encontró info para darlene love merry clayton lisa fischer  judith hill
+[2025-04-09T18:17:06.026+0000] {subprocess.py:93} INFO - 🔍 Consultando: donald lawrence presents the tri city singers
+[2025-04-09T18:17:06.027+0000] {subprocess.py:93} INFO - 🔍 Consultando: kendrick lamar
+[2025-04-09T18:17:06.027+0000] {subprocess.py:93} INFO - 🔍 Consultando: acoustictrench
+[2025-04-09T18:17:06.027+0000] {subprocess.py:93} INFO - 🔍 Consultando: eric hutchinson
+[2025-04-09T18:17:06.027+0000] {subprocess.py:93} INFO - 🔍 Consultando: lizzo
+[2025-04-09T18:17:06.027+0000] {subprocess.py:93} INFO - 🔍 Consultando: carolaine
+[2025-04-09T18:17:06.027+0000] {subprocess.py:93} INFO - 🔍 Consultando: amy hanaialii
+[2025-04-09T18:17:06.028+0000] {subprocess.py:93} INFO - 🔍 Consultando: drew holcomb  the neighbors
+[2025-04-09T18:17:06.028+0000] {subprocess.py:93} INFO - 🔍 Consultando: selena marie
+[2025-04-09T18:17:06.028+0000] {subprocess.py:93} INFO - 🔍 Consultando: carrie fisher
+[2025-04-09T18:17:06.028+0000] {subprocess.py:93} INFO - 🔍 Consultando: juan luis guerra 440
+[2025-04-09T18:17:06.028+0000] {subprocess.py:93} INFO - 🔍 Consultando: bon iver
+[2025-04-09T18:17:06.029+0000] {subprocess.py:93} INFO - 🔍 Consultando: jesse  joy
+[2025-04-09T18:17:06.029+0000] {subprocess.py:93} INFO - 🔍 Consultando: mindy gledhill
+[2025-04-09T18:17:06.030+0000] {subprocess.py:93} INFO - 🔍 Consultando: melvin taylor
+[2025-04-09T18:17:06.030+0000] {subprocess.py:93} INFO - 🔍 Consultando: ron pope
+[2025-04-09T18:17:06.030+0000] {subprocess.py:93} INFO - 🔍 Consultando: ernest ranglin
+[2025-04-09T18:17:06.030+0000] {subprocess.py:93} INFO - 🔍 Consultando: zac brown band  alan jackson
+[2025-04-09T18:17:06.031+0000] {subprocess.py:93} INFO - 🔍 Consultando: erato
+[2025-04-09T18:17:06.031+0000] {subprocess.py:93} INFO - 🔍 Consultando: pablo ziegler trio
+[2025-04-09T18:17:06.031+0000] {subprocess.py:93} INFO - 🔍 Consultando: death angel
+[2025-04-09T18:17:06.031+0000] {subprocess.py:93} INFO - 🔍 Consultando: zak manley
+[2025-04-09T18:17:06.031+0000] {subprocess.py:93} INFO - 🔍 Consultando: kina grannis
+[2025-04-09T18:17:06.031+0000] {subprocess.py:93} INFO - 🔍 Consultando: joshua hyslop
+[2025-04-09T18:17:06.032+0000] {subprocess.py:93} INFO - 🔍 Consultando: liz lawrence
+[2025-04-09T18:17:06.032+0000] {subprocess.py:93} INFO - 🔍 Consultando: lounge covers culture of popular songs
+[2025-04-09T18:17:06.032+0000] {subprocess.py:93} INFO - 🔍 Consultando: jon cleary
+[2025-04-09T18:17:06.032+0000] {subprocess.py:93} INFO - 🔍 Consultando: stephen colbert
+[2025-04-09T18:17:06.032+0000] {subprocess.py:93} INFO - 🔍 Consultando: alex goot
+[2025-04-09T18:17:06.033+0000] {subprocess.py:93} INFO - 🔍 Consultando: catherine feeny
+[2025-04-09T18:17:06.033+0000] {subprocess.py:93} INFO - 🔍 Consultando: jontavious willis
+[2025-04-09T18:17:06.033+0000] {subprocess.py:93} INFO - 🔍 Consultando: ashley mcbryde
+[2025-04-09T18:17:06.033+0000] {subprocess.py:93} INFO - 🔍 Consultando: imaginary future
+[2025-04-09T18:17:06.033+0000] {subprocess.py:93} INFO - 🔍 Consultando: lucy kalantari  the jazz cats
+[2025-04-09T18:17:06.034+0000] {subprocess.py:93} INFO - 🔍 Consultando: chris brown
+[2025-04-09T18:17:06.034+0000] {subprocess.py:93} INFO - 🔍 Consultando: tenille townes
+[2025-04-09T18:17:06.034+0000] {subprocess.py:93} INFO - 🔍 Consultando: iron maiden
+[2025-04-09T18:17:06.034+0000] {subprocess.py:93} INFO - 🔍 Consultando: gordon goodwins big phat band
+[2025-04-09T18:17:06.034+0000] {subprocess.py:93} INFO - 🔍 Consultando: indiaarie
+[2025-04-09T18:17:06.035+0000] {subprocess.py:93} INFO - 🔍 Consultando: jim gaffigan
+[2025-04-09T18:17:06.035+0000] {subprocess.py:93} INFO - 🔍 Consultando: sarah jarosz
+[2025-04-09T18:17:06.035+0000] {subprocess.py:93} INFO - 🔍 Consultando: lizzo featuring gucci mane

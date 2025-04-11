@@ -1,0 +1,31 @@
+[2025-04-11T04:47:57.765+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.transform_grammy manual__2025-04-11T04:47:49.614140+00:00 [queued]>
+[2025-04-11T04:47:57.776+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline_modo_prueba.transform_grammy manual__2025-04-11T04:47:49.614140+00:00 [queued]>
+[2025-04-11T04:47:57.776+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-11T04:47:57.833+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): transform_grammy> on 2025-04-11 04:47:49.614140+00:00
+[2025-04-11T04:47:57.839+0000] {standard_task_runner.py:60} INFO - Started process 107 to run task
+[2025-04-11T04:47:57.841+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_pipeline_modo_prueba', 'transform_grammy', 'manual__2025-04-11T04:47:49.614140+00:00', '--job-id', '393', '--raw', '--subdir', 'DAGS_FOLDER/etl_workflow.py', '--cfg-path', '/tmp/tmp9q55l5uh']
+[2025-04-11T04:47:57.842+0000] {standard_task_runner.py:88} INFO - Job 393: Subtask transform_grammy
+[2025-04-11T04:47:57.956+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_pipeline_modo_prueba.transform_grammy manual__2025-04-11T04:47:49.614140+00:00 [running]> on host c11ea96e8cd6
+[2025-04-11T04:47:58.186+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='simon' AIRFLOW_CTX_DAG_ID='etl_pipeline_modo_prueba' AIRFLOW_CTX_TASK_ID='transform_grammy' AIRFLOW_CTX_EXECUTION_DATE='2025-04-11T04:47:49.614140+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-11T04:47:49.614140+00:00'
+[2025-04-11T04:47:58.188+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-11T04:47:58.190+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/***/scripts/transform_grammy.py']
+[2025-04-11T04:47:58.208+0000] {subprocess.py:86} INFO - Output:
+[2025-04-11T04:47:58.891+0000] {subprocess.py:93} INFO - ✅ Grammy transformado guardado en /opt/***/data/processed/grammy_transformed.parquet
+[2025-04-11T04:47:58.892+0000] {subprocess.py:93} INFO -                                 artist_normalized  ... grammy_nominations
+[2025-04-11T04:47:58.892+0000] {subprocess.py:93} INFO - 0                                       21 savage  ...                  1
+[2025-04-11T04:47:58.893+0000] {subprocess.py:93} INFO - 1       a great big world with christina aguilera  ...                  1
+[2025-04-11T04:47:58.893+0000] {subprocess.py:93} INFO - 2                                           adele  ...                  6
+[2025-04-11T04:47:58.893+0000] {subprocess.py:93} INFO - 3    adele adkins  paul epworth songwriters adele  ...                  1
+[2025-04-11T04:47:58.893+0000] {subprocess.py:93} INFO - 4                                     aida cuevas  ...                  1
+[2025-04-11T04:47:58.893+0000] {subprocess.py:93} INFO - ..                                            ...  ...                ...
+[2025-04-11T04:47:58.894+0000] {subprocess.py:93} INFO - 536                  zac brown band  alan jackson  ...                  1
+[2025-04-11T04:47:58.894+0000] {subprocess.py:93} INFO - 537                                 zach williams  ...                  1
+[2025-04-11T04:47:58.894+0000] {subprocess.py:93} INFO - 538                          zedd featuring foxes  ...                  1
+[2025-04-11T04:47:58.894+0000] {subprocess.py:93} INFO - 539                                  ziggy marley  ...                  3
+[2025-04-11T04:47:58.895+0000] {subprocess.py:93} INFO - 540                                           zoe  ...                  1
+[2025-04-11T04:47:58.895+0000] {subprocess.py:93} INFO - 
+[2025-04-11T04:47:58.895+0000] {subprocess.py:93} INFO - [541 rows x 6 columns]
+[2025-04-11T04:47:58.991+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-04-11T04:47:59.825+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_pipeline_modo_prueba, task_id=transform_grammy, execution_date=20250411T044749, start_date=20250411T044757, end_date=20250411T044759
+[2025-04-11T04:47:59.979+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-11T04:48:00.024+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
